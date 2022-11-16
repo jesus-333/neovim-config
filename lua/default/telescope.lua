@@ -4,14 +4,6 @@ if not status_ok then
   return
 end
 
--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
--- Load extensions
-
-telescope.load_extension('media_files')
-telescope.load_extension('file_browser')
-
--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
 local actions = require "telescope.actions"
 
 telescope.setup {
@@ -98,12 +90,18 @@ telescope.setup {
 			find_cmd = "rg" -- find command (defaults to `fd`)
 		},
 		file_browser = {
-			theme = "dropdown",
-			hijack_netrw = true,
-			-- add_dirs = false,
-			-- files = false,
-			-- depth = false,
-			-- hidden = true,
+			theme = "ivy",
+			hijack_netrw = false,
+			depth = 4,
+			grouped = true,
 		},
 	},
 }
+
+-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+-- Load extensions
+
+telescope.load_extension('media_files')
+telescope.load_extension('file_browser')
+
+-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
