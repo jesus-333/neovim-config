@@ -7,14 +7,14 @@ require "default.keymaps"
 -- Plugins file
 require "default.plugins"
 
--- Colorscheme file (Include code to avoid error whene colorscheme is not found)
+-- Colorscheme file 
 require "default.colorscheme"
 
--- Autocompletition
+-- Autocompletition and LSP
 require "default.cmp"
-
--- LSP
 require "default.lsp"
 
--- Telescope
-require "default.telescope"
+-- Plugin settings
+require "default.telescope" 	-- Telescope
+require "default.treesitter"	-- Treesitter
+require "default.autopairs"		-- Brackets automatic closure

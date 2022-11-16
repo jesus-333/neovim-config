@@ -1,3 +1,5 @@
+-- A handler is a routine/function/method which is specialized in a certain type of data or focused on certain special tasks.
+
 -- Variable (dictionary?) where everythong is saved
 -- A the end of the file M is returned
 local M = {}

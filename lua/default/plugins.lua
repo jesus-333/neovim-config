@@ -44,8 +44,7 @@ return packer.startup(function(use)
 	use "wbthomason/packer.nvim" 	-- Have packer manage itself
 	use "nvim-lua/popup.nvim" 		-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" 	-- Useful lua functions used in lots of plugins
-
-	use "rstacruz/vim-closer" 		-- Automatically close brackets 
+	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
 
 	-- completion plugins
 	use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -72,8 +71,16 @@ return packer.startup(function(use)
 	use 'folke/tokyonight.nvim'	
 
 	-- Telescope
-	use "nvim-telescope/telescope.nvim"
-	use 'nvim-telescope/telescope-media-files.nvim'
+	use "nvim-telescope/telescope.nvim"					-- Telescope main repository
+	use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files
+	use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files
+
+	-- Treesitter 
+	use	"nvim-treesitter/nvim-treesitter" 	-- Treesitter main repository
+	use "p00f/nvim-ts-rainbow" 				-- Plugin for Treesitter for nested parenthesis
+	
+	-- Devicons
+	use 'nvim-tree/nvim-web-devicons'
 	
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

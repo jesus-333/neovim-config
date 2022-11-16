@@ -72,10 +72,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 -- Telescope 
 
--- With leader (space) + f open the file finder with some option
+-- With leader (space) + f open the telescope defualt file finder with some option
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
--- Wiith ctrl + t open the function to search through text
+-- With ctrl + t open the function to search through text
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
