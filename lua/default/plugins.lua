@@ -45,20 +45,20 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim" 		-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" 	-- Useful lua functions used in lots of plugins
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
+	use "numToStr/Comment.nvim" 	-- Easily comment stuff
 
 	-- completion plugins
-	use "hrsh7th/nvim-cmp" -- The completion plugin
-	use "hrsh7th/cmp-buffer" -- buffer completions
-	use "hrsh7th/cmp-path" -- path completions
-	use "hrsh7th/cmp-cmdline" -- cmdline completions
-	use "saadparwaiz1/cmp_luasnip" -- snippet completions
-	use "hrsh7th/cmp-nvim-lsp"
-	use "hrsh7th/cmp-nvim-lua"
-
+	use "hrsh7th/nvim-cmp" 			-- The completion plugin
+	use "hrsh7th/cmp-buffer" 		-- buffer completions
+	use "hrsh7th/cmp-path" 			-- path completions
+	use "hrsh7th/cmp-cmdline" 		-- cmdline completions
+	use "hrsh7th/cmp-nvim-lsp"		-- nvim-cmp source for neovim's built-in language server client.
+	use "hrsh7th/cmp-nvim-lua"		-- nvim-cmp source for neovim Lua API.
+	
 	-- snippets
 	use "L3MON4D3/LuaSnip" --snippet engine
-	use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-	
+	use "saadparwaiz1/cmp_luasnip" 	-- snippet completions
+	-- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
 	-- LSP (Language Server Protocol)
 	use {
@@ -68,7 +68,7 @@ return packer.startup(function(use)
 	}
 
 	-- Colorscheme
-	use 'folke/tokyonight.nvim'	
+	use 'folke/tokyonight.nvim'
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"					-- Telescope main repository

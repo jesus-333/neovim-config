@@ -1,8 +1,9 @@
-
+-- Server to config
 local servers = {
 	"sumneko_lua",
 	"pyright",
-	"jsonls",
+	-- "jedi-language-server", --Not working
+	"pylsp"
 }
 
 local settings = {
@@ -46,4 +47,6 @@ for _, server in pairs(servers) do
 	end
 
 	lspconfig[server].setup(opts)
+
+	require'lspconfig'.jedi_language_server.setup{}
 end
