@@ -58,12 +58,11 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-cmdline" 		-- cmdline completions
 	use "hrsh7th/cmp-nvim-lsp"		-- nvim-cmp source for neovim's built-in language server client.
 	use "hrsh7th/cmp-nvim-lua"		-- nvim-cmp source for neovim Lua API.
-	-- use {'neoclide/coc.nvim', branch = 'release'} -- Conquer of completion plugin (Alternative to native nvim LSP)
 
 	-- snippets
-	use "L3MON4D3/LuaSnip" --snippet engine
-	use "saadparwaiz1/cmp_luasnip" 	-- snippet completions
-	-- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+	use "L3MON4D3/LuaSnip" 					--snippet engine
+	use "saadparwaiz1/cmp_luasnip" 			-- snippet completions
+	-- use "rafamadriz/friendly-snippets" 	-- a bunch of snippets to use
 
 	-- LSP (Language Server Protocol)
 	use {
@@ -83,7 +82,8 @@ return packer.startup(function(use)
 	-- Treesitter 
 	use	"nvim-treesitter/nvim-treesitter" 	-- Treesitter main repository
 	use "p00f/nvim-ts-rainbow" 				-- Plugin for Treesitter for nested parenthesis
-	
+	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Use treesitter queries to create comments based on the context of the file
+
 	-- Devicons
 	use 'nvim-tree/nvim-web-devicons'
 	

@@ -92,7 +92,7 @@ telescope.setup {
 		file_browser = {
 			theme = "ivy",
 			hijack_netrw = false,
-			depth = 4,
+			depth = 5,
 			grouped = true,
 		},
 	},

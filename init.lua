@@ -20,3 +20,5 @@ require "default.telescope" 	-- Telescope
 require "default.treesitter"	-- Treesitter
 require "default.autopairs"		-- Brackets automatic closure
 require "default.lualine"		-- lualine statusbar
+require "default.comments"		-- Comments plugin
+

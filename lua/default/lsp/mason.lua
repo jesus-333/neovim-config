@@ -2,6 +2,7 @@
 local servers = {
 	"sumneko_lua",
 	"pyright",
+	"grammarly-languageserver",
 	--"pylsp",
 }
 
@@ -49,5 +50,6 @@ for _, server in pairs(servers) do
 	lspconfig[server].setup(opts)
 end
 
--- Separate setup for jedi server
+-- Separate setup (the setup of some servers don't work with the cycle)
 --require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.grammarly.setup{ init_options = {clientId = "client_BaDkMgx4X19X9UxxYRCXZo"}}
