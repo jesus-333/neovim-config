@@ -18,13 +18,13 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    --lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_b = {'filename'},
+	lualine_a = {'mode'},
+	lualine_b = {'filename'},
 	lualine_c = {{ require("nvim-navic").get_location, cond = require("nvim-navic").is_available }},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+	lualine_x = {'encoding', 'fileformat', 'filetype'},
+	--lualine_y = {'progress'},
+	lualine_y = {'branch', 'diff', 'diagnostics'},
+	lualine_z = {'location', 'progress'}
   },
   inactive_sections = {
     lualine_a = {},
