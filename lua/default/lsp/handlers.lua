@@ -71,9 +71,10 @@ end
 -- Personal keybinding for LSP
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
+	-- Jump to funciton DECLARATION pressing gD (uppercase D)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	
-	-- Jump to funciton definition pressing gd (lowercase d)
+	-- Jump to funciton DEFINITION pressing gd (lowercase d)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	
 	-- Pressing capital K (or shift + k) over something show a description
@@ -81,9 +82,10 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	
+	-- Pressing gr show all the "place" where the selected text appears in various file
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
 	
 	-- Show error/diagnostic pressing gl
@@ -91,7 +93,6 @@ local function lsp_keymaps(bufnr)
 		bufnr,
 		"n",
 		"gl",
-		--'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
 		'<cmd>lua vim.diagnostic.open_float()<CR>',
 		opts
 	)
@@ -101,12 +102,17 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  -- Turn off formatting if ts server is active
-  if client.name == "tsserver" then
-    client.server_capabilities.documentFormattingProvider = false
-  end
-  lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
+	-- Turn off formatting if ts server is active
+	if client.name == "tsserver" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
+	lsp_keymaps(bufnr)
+	lsp_highlight_document(client)
+	
+	-- Navic setup
+	if client.server_capabilities.documentSymbolProvider then
+		require("nvim-navic").attach(client, bufnr)
+    end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

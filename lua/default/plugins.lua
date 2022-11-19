@@ -40,12 +40,16 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
+	-- Various
 	use "wbthomason/packer.nvim" 	-- Have packer manage itself
 	use "nvim-lua/popup.nvim" 		-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim" 	-- Useful lua functions used in lots of plugins
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
 	use "numToStr/Comment.nvim" 	-- Easily comment stuff
+	
+	-- Statusline plugin
+	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
+	use "SmiteshP/nvim-navic"		-- A simple statusline/winbar component that uses LSP to show your current code context (e.g. if you are inside a function the name of the function)
 
 	-- completion plugins
 	use "hrsh7th/nvim-cmp" 			-- The completion plugin
@@ -54,7 +58,8 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-cmdline" 		-- cmdline completions
 	use "hrsh7th/cmp-nvim-lsp"		-- nvim-cmp source for neovim's built-in language server client.
 	use "hrsh7th/cmp-nvim-lua"		-- nvim-cmp source for neovim Lua API.
-	
+	-- use {'neoclide/coc.nvim', branch = 'release'} -- Conquer of completion plugin (Alternative to native nvim LSP)
+
 	-- snippets
 	use "L3MON4D3/LuaSnip" --snippet engine
 	use "saadparwaiz1/cmp_luasnip" 	-- snippet completions

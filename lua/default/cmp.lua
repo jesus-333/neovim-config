@@ -1,4 +1,4 @@
--- This file contain settings for the completition (cmp) 
+-- This file contain settings for the completion (cmp) 
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
@@ -54,7 +54,7 @@ cmp.setup {
     end,
   },
 
-  -- Keybinding for completition
+  -- Keybinding for completion 
   mapping = {
     -- Move up and down between suggestion
 	["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -64,12 +64,12 @@ cmp.setup {
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     
-	-- Show all completition
+	-- Show all completion 
 	["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 	
     ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     
-	-- Exit (abort) completition
+	-- Exit (abort) completion 
 	["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
@@ -120,7 +120,7 @@ cmp.setup {
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       
-	  -- Show the origin of the completition in the floating window
+	  -- Show the origin of the completion in the floating window
 	  vim_item.menu = ({
       	nvim_lsp = "[LSP]",
       	nvim_lua = "[NVIM_LUA]",
@@ -132,7 +132,7 @@ cmp.setup {
     end,
   },
 
-  -- From what sources get the completition
+  -- From what sources get the completion 
   sources = {
   	{ name = "nvim_lsp"},
   	{ name = "nvim_lua"},

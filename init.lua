@@ -10,11 +10,13 @@ require "default.plugins"
 -- Colorscheme file 
 require "default.colorscheme"
 
--- Autocompletition and LSP
+-- Autocompletion and LSP
 require "default.cmp"
 require "default.lsp"
+--require "default.kite"
 
 -- Plugin settings
 require "default.telescope" 	-- Telescope
 require "default.treesitter"	-- Treesitter
 require "default.autopairs"		-- Brackets automatic closure
+require "default.lualine"		-- lualine statusbar

@@ -2,8 +2,7 @@
 local servers = {
 	"sumneko_lua",
 	"pyright",
-	-- "jedi-language-server", --Not working
-	"pylsp"
+	--"pylsp",
 }
 
 local settings = {
@@ -32,6 +31,7 @@ end
 
 local opts = {}
 
+-- Setup lsp servers
 for _, server in pairs(servers) do
 	opts = {
 		on_attach = require("default.lsp.handlers").on_attach,
@@ -47,6 +47,7 @@ for _, server in pairs(servers) do
 	end
 
 	lspconfig[server].setup(opts)
-
-	require'lspconfig'.jedi_language_server.setup{}
 end
+
+-- Separate setup for jedi server
+--require'lspconfig'.jedi_language_server.setup{}
