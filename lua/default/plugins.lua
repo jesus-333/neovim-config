@@ -84,6 +84,10 @@ return packer.startup(function(use)
 	use "p00f/nvim-ts-rainbow" 				-- Plugin for Treesitter for nested parenthesis
 	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Use treesitter queries to create comments based on the context of the file
 
+	-- Git 
+	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame etc 
+	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit
+	
 	-- Devicons
 	use 'nvim-tree/nvim-web-devicons'
 	
