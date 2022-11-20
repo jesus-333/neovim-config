@@ -8,17 +8,24 @@ List of all costum keybindings.
 The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key 
 
 ## Normal mode
+### Text editing commands
 * <kbd>Alt</kbd> + <kbd>k</kbd>: Move current line up
 * <kbd>Alt</kbd> + <kbd>j</kbd>: Move current line down
+* <kbd>g</kbd> + <kbd>c</kbd> + <kbd>c</kbd>:Comment current line using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+* <kbd>g</kbd> + <kbd>b</kbd> + <kbd>c</kbd>:Comment current line using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+### Movement commands
 * <kbd>g</kbd> + <kbd>g</kbd>: Go to the bottom of the file
 * <kbd>G</kbd> (or  <kbd>⇧ Shift</kbd> + <kbd>g</kbd>): Go to the end of the file
 * <kbd>⇧ Shift</kbd> + <kbd>h</kbd>: Move to previous tab
 * <kbd>⇧ Shift</kbd> + <kbd>l</kbd>: Move to next tab
-* <kbd>g</kbd> + <kbd>c</kbd> + <kbd>c</kbd>:Comment current line using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
-* <kbd>g</kbd> + <kbd>b</kbd> + <kbd>c</kbd>:Comment current line using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+### Change mode
+* <kbd>i</kbd> (or <kbd>a</kbd>): Enter in insert mode
+* <kbd>v</kbd>: Enter visual character mode
+* <kbd>V</kbd> (or <kbd>⇧ Shift</kbd> + <kbd>v</kbd>): Enter visual line mode
+* <kbd>ctrl</kbd> + <kbd>q</kbd>: Enter visual block mode
 
 ## Insert
-* <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode
+<kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode
 
 ## Visual
 * <kbd>></kbd>: indent
