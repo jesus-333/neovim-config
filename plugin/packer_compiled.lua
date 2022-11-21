@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\albi2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\albi2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "C:\\Users\\albi2\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",

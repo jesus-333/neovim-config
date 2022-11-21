@@ -46,6 +46,7 @@ return packer.startup(function(use)
 	use "nvim-lua/plenary.nvim" 	-- Useful lua functions used in lots of plugins
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
 	use "numToStr/Comment.nvim" 	-- Easily comment stuff
+	use 'kyazdani42/nvim-tree.lua' 	-- nvim-tree (file explorer)
 	
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.

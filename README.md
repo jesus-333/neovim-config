@@ -43,6 +43,8 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>d</kbd> (or  <kbd>Alt</kbd> + <kbd>d</kbd>): remove selected file ([telescope-file-browser][telescope-file-browser] plugin)
 * <kbd>c</kbd> (or  <kbd>Alt</kbd> + <kbd>c</kbd>): create file in current location ([telescope-file-browser][telescope-file-browser] plugin)
 
+## nvim-tree
+* <kbd>Leader</kbd> + <kbd>e</kbd>: Open nvim-tree file explorer
 
 # Stuff to install
 Note sure aboout this... put here as a reminder

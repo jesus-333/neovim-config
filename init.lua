@@ -22,3 +22,4 @@ require "default.autopairs"		-- Brackets automatic closure
 require "default.lualine"		-- lualine statusbar
 require "default.comments"		-- Comments plugin (add command to comments line(s))
 require "default.gitsign"		-- Gitsign (show diff and other stuff)
+require "default.nvim-tree"		-- nvim-tree (file explorer)
