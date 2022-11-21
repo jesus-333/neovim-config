@@ -14,9 +14,11 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-    disable_netrw = true,
+    disable_netrw = true, -- Disable defualt file explore 
     hijack_netrw = true,
     open_on_setup = false,
+	
+	-- File that nvim_tree ignore
     ignore_ft_on_setup = {
         "startify",
         "dashboard",
@@ -29,6 +31,8 @@ nvim_tree.setup {
         enable = true,
         auto_open = true,
     },
+
+	-- Report diagnostic (error, warning etc) of the files in the tree
     diagnostics = {
         enable = true,
         icons = {
@@ -48,6 +52,7 @@ nvim_tree.setup {
         ignore = true,
         timeout = 500,
     },
+	-- Visual settings 
     view = {
         width = 30,
         height = 30,
@@ -56,10 +61,11 @@ nvim_tree.setup {
         auto_resize = true,
         mappings = {
             custom_only = false,
-            list = {
-            { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-            { key = "h", cb = tree_cb "close_node" },
-            { key = "v", cb = tree_cb "vsplit" },
+            -- Costum keybinding
+			list = {
+            { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" }, 	-- o work as <CR>
+            { key = "h", cb = tree_cb "close_node" }, 				-- Collapse current folder
+            { key = "v", cb = tree_cb "vsplit" },					-- Press v open file in vertical split
             },
         },
         number = false,
