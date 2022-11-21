@@ -47,7 +47,9 @@ return packer.startup(function(use)
 	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
 	use "numToStr/Comment.nvim" 	-- Easily comment stuff
 	use 'kyazdani42/nvim-tree.lua' 	-- nvim-tree (file explorer)
-	
+	use 'RRethy/vim-illuminate'		-- Highlight text under the cursor
+	use 'romgrk/barbar.nvim'		-- Show tabs of the open file
+
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
 	use "SmiteshP/nvim-navic"		-- A simple statusline/winbar component that uses LSP to show your current code context (e.g. if you are inside a function the name of the function)
@@ -79,7 +81,8 @@ return packer.startup(function(use)
 	use "nvim-telescope/telescope.nvim"					-- Telescope main repository
 	use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files
 	use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files
-
+	--[[ use "crispgm/telescope-heading.nvim"				-- Search with telescope between header of markdown file ]]
+	
 	-- Treesitter 
 	use	"nvim-treesitter/nvim-treesitter" 	-- Treesitter main repository
 	use "p00f/nvim-ts-rainbow" 				-- Plugin for Treesitter for nested parenthesis

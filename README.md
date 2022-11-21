@@ -11,8 +11,8 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 ### Text editing commands
 * <kbd>Alt</kbd> + <kbd>k</kbd>: Move current line up
 * <kbd>Alt</kbd> + <kbd>j</kbd>: Move current line down
-* <kbd>g</kbd> + <kbd>c</kbd> + <kbd>c</kbd>:Comment current line using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
-* <kbd>g</kbd> + <kbd>b</kbd> + <kbd>c</kbd>:Comment current line using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+* <kbd>g</kbd> + <kbd>c</kbd> + <kbd>c</kbd>: Comment current line using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+* <kbd>g</kbd> + <kbd>b</kbd> + <kbd>c</kbd>: Comment current line using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 ### Movement commands
 * <kbd>g</kbd> + <kbd>g</kbd>: Go to the bottom of the file
 * <kbd>G</kbd> (<kbd>⇧ Shift</kbd> + <kbd>g</kbd>): Go to the end of the file
@@ -31,16 +31,16 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>V</kbd> (<kbd>⇧ Shift</kbd> + <kbd>v</kbd>): Enter visual line mode
 * <kbd>ctrl</kbd> + <kbd>q</kbd>: Enter visual block mode
 
-## Insert
+## Insert mode
 <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode
 
-## Visual
+## Visual mode
 * <kbd>></kbd>: indent
 * <kbd><</kbd>: unindent
 * <kbd>Alt</kbd> + <kbd>k</kbd>: Move selected line(s) up
 * <kbd>Alt</kbd> + <kbd>j</kbd>: Move selected line(s) down
-* <kbd>g</kbd> + <kbd>c</kbd> :Comment current selection using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
-* <kbd>g</kbd> + <kbd>b</kbd> :Comment current selection using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+* <kbd>g</kbd> + <kbd>c</kbd>: Comment current selection using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
+* <kbd>g</kbd> + <kbd>b</kbd>: Comment current selection using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 
 
 ## Telescope
@@ -57,6 +57,14 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>⏎ Enter</kbd> (or <kbd>o</kbd>): Open file
 * <kbd>h</kbd>: Collapse the current folder tree
 * <kbd>v</kbd>: Open the file in vertical split
+* <kbd>c</kbd>: (copy)  Add the current selection (files and/or folders) to clipboard
+* <kbd>x</kbd>: (cut)   Add the current selection (files and/or folders) to clipboard
+* <kbd>p</kbd>: (paste) Paste the contents in the clipboard
+* <kbd>a</kbd>: Create file
+
+## Lazygit
+* <kbd>?</kbd>: Show command 
+* <kbd>a</kbd>: Stage/Unstage all 
 
 # Stuff to install
 Note sure aboout this... put here as a reminder
