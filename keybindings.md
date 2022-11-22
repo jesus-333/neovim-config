@@ -63,3 +63,7 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 ## Lazygit
 * <kbd>?</kbd>: Show command 
 * <kbd>a</kbd>: Stage/Unstage all 
+
+
+[telescope-file-browser]:https://github.com/nvim-telescope/telescope-file-browser.nvim
+[comments_plugin]:https://github.com/numToStr/Comment.nvim
