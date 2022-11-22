@@ -41,14 +41,17 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 	-- Various
-	use "wbthomason/packer.nvim" 	-- Have packer manage itself
-	use "nvim-lua/popup.nvim" 		-- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" 	-- Useful lua functions used in lots of plugins
-	use "windwp/nvim-autopairs" 	-- Autopairs, integrates with both cmp and treesitter
-	use "numToStr/Comment.nvim" 	-- Easily comment stuff
-	use 'kyazdani42/nvim-tree.lua' 	-- nvim-tree (file explorer)
-	use 'RRethy/vim-illuminate'		-- Highlight text under the cursor
-	use 'romgrk/barbar.nvim'		-- Show tabs of the open file
+	use "wbthomason/packer.nvim"		-- Have packer manage itself
+	use "nvim-lua/popup.nvim"			-- An implementation of the Popup API from vim in Neovim
+	use "nvim-lua/plenary.nvim"			-- Useful lua functions used in lots of plugins
+	use "windwp/nvim-autopairs"			-- Autopairs, integrates with both cmp and treesitter
+	use "numToStr/Comment.nvim"			-- Easily comment stuff
+	use 'kyazdani42/nvim-tree.lua'		-- nvim-tree (file explorer)
+	use 'RRethy/vim-illuminate'			-- Highlight text under the cursor
+	use 'romgrk/barbar.nvim'			-- Show tabs of the open file
+	use 'simrat39/symbols-outline.nvim' -- List of symbols (e.g. variable name in a file)
+	use 'akinsho/toggleterm.nvim'		-- Persist and toggle multiple terminals during an editing session
+	use "folke/which-key.nvim"			-- Show the possible keybinding when you press a key
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
@@ -73,9 +76,10 @@ return packer.startup(function(use)
 		"williamboman/mason-lspconfig.nvim",	-- LSP Installer
 		"neovim/nvim-lspconfig" 				-- Enalbe LSP
 	}
-
+	
 	-- Colorscheme
 	use 'folke/tokyonight.nvim'
+	use "lunarvim/darkplus.nvim"
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"					-- Telescope main repository

@@ -24,3 +24,5 @@ require "default.comments"			-- Comments plugin (add command to comments line(s)
 require "default.gitsign"			-- Gitsign (show diff and other stuff)
 require "default.nvim-tree"			-- nvim-tree (file explorer)
 require "default.vim-illuminate"	-- vim-illuminate (text highlight)
+require "default.symbols-outline"	-- List of symbols (e.g. variable name)
+require "default.toggleterm"		-- Terminal plugin
