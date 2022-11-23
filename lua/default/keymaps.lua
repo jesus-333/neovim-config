@@ -42,6 +42,9 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down
 
+-- Other
+keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) -- Close the current buffer
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)

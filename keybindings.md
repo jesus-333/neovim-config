@@ -22,6 +22,7 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>b</kbd>: Previous word
 * <kbd>w</kbd>: Next word (start of the next word)
 * <kbd>e</kbd>: Next word (end of the next word)
+* <kbd>ctrl</kbd> + <kbd>b</kbd>: Close the current buffer
 ### Change mode
 * <kbd>i</kbd>: Enter in insert mode before the cursor
 * <kbd>a</kbd>: Enter in insert mode after the cursor
