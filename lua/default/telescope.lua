@@ -95,6 +95,7 @@ telescope.setup {
 			depth = 5,
 			grouped = true,
 		},
+		
 	},
 }
 
@@ -104,4 +105,5 @@ telescope.setup {
 telescope.load_extension('media_files')
 telescope.load_extension('file_browser')
 telescope.load_extension('lazygit')
+--[[ telescope.load_extension('telescope-tabs') ]]
 -- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
