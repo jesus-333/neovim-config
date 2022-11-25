@@ -49,8 +49,9 @@ nvim_tree.setup {
     },
     git = {
         enable = true,
-        ignore = true,
-        timeout = 500,
+        ignore = false, 		-- Ignore files based on .gitignore
+		show_on_dirs = true,	-- Show status icons of children when directory itself has no status icon
+        timeout = 500
     },
 	-- Visual settings 
     view = {
