@@ -89,4 +89,6 @@ keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.fi
 -- With ctrl + t open the function to search through text
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
+keymap("n", "<leader>t", "<cmd>:Telescope telescope-tabs list_tabs<cr>", opts)
+
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
