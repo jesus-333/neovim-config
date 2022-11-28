@@ -28,3 +28,4 @@ require "default.symbols-outline"	-- List of symbols (e.g. variable name)
 require "default.toggleterm"		-- Terminal plugin
 require "default.which-key"			-- Show keybinding
 require "default.alpha"				-- Greeter (default menu when open neovim)
+require "default.indentline"		-- Show Vertical line corresponding to the various level of indentation
