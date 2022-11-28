@@ -52,6 +52,7 @@ return packer.startup(function(use)
 	use 'simrat39/symbols-outline.nvim' -- List of symbols (e.g. variable name in a file)
 	use 'akinsho/toggleterm.nvim'		-- Persist and toggle multiple terminals during an editing session
 	use "folke/which-key.nvim"			-- Show the possible keybinding when you press a key
+	use 'goolord/alpha-nvim'			-- Greeter (default stuff when you don't open directly a file)
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.

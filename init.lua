@@ -27,3 +27,4 @@ require "default.vim-illuminate"	-- vim-illuminate (text highlight)
 require "default.symbols-outline"	-- List of symbols (e.g. variable name)
 require "default.toggleterm"		-- Terminal plugin
 require "default.which-key"			-- Show keybinding
+require "default.alpha"				-- Greeter (default menu when open neovim)
