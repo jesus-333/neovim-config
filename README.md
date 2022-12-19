@@ -16,6 +16,7 @@ Note sure aboout this... put here as a reminder
 
 ```
 conda install pyright
+npm install -g pyright
 pip install python-language-server
 npm i -g grammarly-languageserver
 
