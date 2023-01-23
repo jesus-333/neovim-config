@@ -88,15 +88,15 @@ return packer.startup(function(use)
 	use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files
 	use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files
 	--[[ use "crispgm/telescope-heading.nvim"				-- Search with telescope between header of markdown file ]]
-	use {
-		'LukasPietzschmann/telescope-tabs',
-		requires = { 'nvim-telescope/telescope.nvim' },
-		config = function()
-			require'telescope-tabs'.setup{
-				-- Your custom config :^)
-			}
-		end
-	}
+	--[[ use { ]]
+	--[[ 	'LukasPietzschmann/telescope-tabs', ]]
+	--[[ 	requires = { 'nvim-telescope/telescope.nvim' }, ]]
+	--[[ 	config = function() ]]
+	--[[ 		require'telescope-tabs'.setup{ ]]
+	--[[ 			-- Your custom config :^) ]]
+	--[[ 		} ]]
+	--[[ 	end ]]
+	--[[ } ]]
 
 	-- Treesitter 
 	use	"nvim-treesitter/nvim-treesitter" 				-- Treesitter main repository
