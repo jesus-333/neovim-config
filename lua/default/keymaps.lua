@@ -44,6 +44,8 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down
 
 -- Other
 keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) -- Close the current buffer
+keymap("n", "<leader>w", ":w!<cr>", opts)   -- Save file
+keymap("n", "<leader>z", ":LazyGit<CR>", opts) -- LazyGit
 
 -- Insert --
 -- Press jk fast to enter
@@ -86,9 +88,10 @@ keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
--- With ctrl + t open the function to search through text
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+-- With leader + t open the function to search through text
+keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 
-keymap("n", "<leader>t", "<cmd>:Telescope telescope-tabs list_tabs<cr>", opts)
+-- Telescope tab (Not installed)
+--[[ keymap("n", "<leader>t", "<cmd>:Telescope telescope-tabs list_tabs<cr>", opts) ]]
 
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

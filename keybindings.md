@@ -40,12 +40,12 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>Alt</kbd> + <kbd>j</kbd>: Move selected line(s) down
 * <kbd>g</kbd> + <kbd>c</kbd>: Comment current selection using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 * <kbd>g</kbd> + <kbd>b</kbd>: Comment current selection using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
-
+* <kbd>Leader</kbd> + <kbd>w</kbd>: Save file
 
 ## Telescope
 * <kbd>Leader</kbd> + <kbd>f</kbd>: Search between files with default telescope
 * <kbd>Leader</kbd> + <kbd>F</kbd> (<kbd>Leader</kbd> + <kbd>⇧ Shift</kbd> + <kbd>f</kbd>): Search between files ([telescope-file-browser][telescope-file-browser] plugin)
-* <kbd>ctrl</kbd> + <kbd>t</kbd>: Live grep search (i.e. search in text inside files)
+* <kbd>Leader</kbd> + <kbd>t</kbd>: Live grep search (i.e. search in text inside files)
 * <kbd>d</kbd> (or  <kbd>Alt</kbd> + <kbd>d</kbd>): remove selected file ([telescope-file-browser][telescope-file-browser] plugin)
 * <kbd>c</kbd> (or  <kbd>Alt</kbd> + <kbd>c</kbd>): create file in current location ([telescope-file-browser][telescope-file-browser] plugin)
 
