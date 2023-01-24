@@ -23,6 +23,10 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>w</kbd>: Next word (start of the next word)
 * <kbd>e</kbd>: Next word (end of the next word)
 * <kbd>ctrl</kbd> + <kbd>b</kbd>: Close the current buffer
+### Yank (copy command)
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>w</kbd>: copy the word currently selected
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>s</kbd>: copy current sentence
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>b</kbd>: copy block (i.e. inside parenthesis)
 ### Change mode
 * <kbd>i</kbd>: Enter in insert mode before the cursor
 * <kbd>a</kbd>: Enter in insert mode after the cursor
@@ -41,6 +45,7 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>g</kbd> + <kbd>c</kbd>: Comment current selection using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 * <kbd>g</kbd> + <kbd>b</kbd>: Comment current selection using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 * <kbd>Leader</kbd> + <kbd>w</kbd>: Save file
+* <kbd>Leader</kbd> + <kbd>z</kbd>: Open Lazygit
 
 ## Telescope
 * <kbd>Leader</kbd> + <kbd>f</kbd>: Search between files with default telescope
