@@ -29,3 +29,4 @@ require "default.toggleterm"		-- Terminal plugin
 require "default.which-key"			-- Show keybinding
 require "default.alpha"				-- Greeter (default menu when open neovim)
 require "default.indentline"		-- Show Vertical line corresponding to the various level of indentation
+require "default.flutter"			-- Flutter integratio

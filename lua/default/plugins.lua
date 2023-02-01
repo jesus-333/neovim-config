@@ -54,6 +54,7 @@ return packer.startup(function(use)
 	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
 	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
 	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines).
+	use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.

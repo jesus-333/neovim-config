@@ -1,4 +1,4 @@
--- Chcek if telescop is installe
+-- Chcek if telescop is installed
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
   return
