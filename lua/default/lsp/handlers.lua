@@ -92,7 +92,7 @@ M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	--[[ lsp_highlight_document(client) ]]
 	
-	-- Navic setup
+	-- Navic setup (A simple statusline/winbar component that uses LSP to show your current code context)
 	if client.server_capabilities.documentSymbolProvider then
         --print(client.name, client.name == "pyright")
 		require("nvim-navic").attach(client, bufnr)
