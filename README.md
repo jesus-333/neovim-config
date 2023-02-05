@@ -1,7 +1,7 @@
 # neovim-config
-Configuration for Neovim editor
+Pure lua Configuration for Neovim editor
 
-Based on this [LunarVim](https://github.com/LunarVim) [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) repository
+Based on [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) from [LunarVim](https://github.com/LunarVim).
 
 # Keybindings
 A file containig the major part of keybindings can be find [here](keybindings.md)
@@ -16,6 +16,7 @@ Put here as a reminder
 * [tsserver](https://github.com/typescript-language-server/typescript-language-server)
 * [html-lsp](https://github.com/hrsh7th/vscode-langservers-extracted)
 * [css-lsp](https://github.com/hrsh7th/vscode-langservers-extracted)
+
 ```
 conda install pyright
 npm install -g pyright
