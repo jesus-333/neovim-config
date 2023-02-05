@@ -15,7 +15,7 @@ Put here as a reminder
 * [lazygit](https://github.com/jesseduffield/lazygit)
 * [tsserver](https://github.com/typescript-language-server/typescript-language-server)
 * [html-lsp](https://github.com/hrsh7th/vscode-langservers-extracted)
-
+* [css-lsp](https://github.com/hrsh7th/vscode-langservers-extracted)
 ```
 conda install pyright
 npm install -g pyright

@@ -4,6 +4,8 @@ local servers = {
 	"pyright",
 	"clangd",
 	"tsserver",
+	"html",
+	"cssls"
 }
 
 local settings = {
