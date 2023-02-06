@@ -42,6 +42,8 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>}</kbd> + <kbd>}</kbd>: Remove square brackets around a word (not work perfectly)
 * <kbd>'</kbd> + <kbd>'</kbd>: Surround word under the cursor with single quotaion mark
 * <kbd>"</kbd> + <kbd>"</kbd>: Surround word under the cursor with double quotaion mark
+* <kbd>"</kbd> + <kbd>(</kbd> (or <kbd>"</kbd> + <kbd>)</kbd>): Replace double quoutes with round brackets around a word
+* <kbd>(</kbd> + <kbd>"</kbd> (or <kbd>)</kbd> + <kbd>"</kbd>): Replace brackets with round double quoutes around a word 
 
 ## Insert mode
 <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode

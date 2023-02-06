@@ -43,18 +43,18 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down
 
 -- Other
-keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) -- Close the current buffer
-keymap("n", "<leader>w", ":w!<cr>", opts)   -- Save file
-keymap("n", "<leader>z", ":LazyGit<CR>", opts) -- LazyGit
+keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) 		-- Close the current buffer
+keymap("n", "<leader>w", ":w!<cr>", opts)   	-- Save file
+keymap("n", "<leader>z", ":LazyGit<CR>", opts) 	-- Open LazyGit
+vim.keymap.set("n", "--", "cc<ESC>33i- <ESC><ESC>gccP<ESC>", {remap = true, silent = true}) -- Insert a string of dash space char as comment
+--[[ vim.keymap.set("n", "--", "cc<ESC>33i- <ESC><ESC>gccP<ESC>jVxA<CR><C-R>\"",{remap = true, silent = true}) -- Insert a string of dash space char as comment ]]
 
 -- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", opts) -- Press jk fast to enter
 
 -- Visual --
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv", opts) -- Remove indent
+keymap("v", ">", ">gv", opts) -- Indent
 
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
@@ -81,18 +81,36 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Symbols-Outline
 keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
 
--- nvim-surround
---[[ keymap("n", "((", "ysiwb", opts)   -- Save file ]]
+-- Surround Add/remove (nvim-surround)
+vim.keymap.set("n", "((", 	"ysiw)", {remap = true, silent = true})   	-- surround word under the cursor with round brackets 	
+vim.keymap.set("n", "))", 	"ds)", 	 {remap = true, silent = true})   	-- remove round brackets around a word (not work perfectly)	
+vim.keymap.set("n", "{{", 	"ysiw}", {remap = true, silent = true})   	-- surround word under the cursor with square brackets	
+vim.keymap.set("n", "}}", 	"ds}", 	 {remap = true, silent = true})   	-- remove square brackets around a word (not work perfectly 	
+vim.keymap.set("n", "\"\"", "ysiw\"",{remap = true, silent = true})		-- surround word under the cursor with single quotaion mark   	
+vim.keymap.set("n", "''", 	"ysiw'", {remap = true, silent = true})   	-- surround word under the cursor with double quotaion mark 	
 
--- Surround (with basic VIM)
-keymap("n", "((", "ciw(<C-r>\")<ESC>", opts)   		-- Surround word under the cursor with round brackets
-keymap("n", "))", "di(hPl2x", opts)   				-- Remove round brackets around a word (not work perfectly)
-keymap("n", "[[", "ciw[<C-r>\"]<ESC>", opts)   		-- Surround word under the cursor with square brackets (NOT WORK)
-keymap("n", "]]", "di[hPl2x", opts)   				-- Remove square brackets around a word (not work perfectly) (NOT WORK)
-keymap("n", "{{", "ciw{<C-r>\"}<ESC>", opts)   		-- Surround word under the cursor with square brackets
-keymap("n", "}}", "di{hPl2x", opts)   				-- Remove square brackets around a word (not work perfectly)
-keymap("n", "''", "ciw'<C-r>\"'<ESC>", opts)		-- Surround word under the cursor with single quotaion mark
-keymap("n", "\"\"", "ciw\"<C-r>\"\"<ESC>", opts)	-- Surround word under the cursor with double quotaion mark
+-- Surround Replacec (with basic VIM)
+vim.keymap.set("n", "\"(", "cs\"(", {remap = true, silent = true}) 		-- Replace double quoutes with round brackets around a word
+vim.keymap.set("n", "\")", "cs\"(", {remap = true, silent = true}) 		-- Replace double quoutes with round brackets around a word
+vim.keymap.set("n", "(\"", "cs(\"", {remap = true, silent = true})		-- Replace round brackets with double quoutes around a word
+vim.keymap.set("n", ")\"", "cs(\"", {remap = true, silent = true})		-- Replace round brackets with double quoutes around a word
+vim.keymap.set("n", "\"'", "cs\"'", {remap = true, silent = true})		-- Replace single quoutes with double quotes around a word
+vim.keymap.set("n", "'\"", "cs'\"", {remap = true, silent = true})		-- Replace double quoutes with single quotes around a word
+
+-- Surround Add/remove (with basic VIM)
+--[[ keymap("n", "((", "ciw(<C-r>\")<ESC>", opts)   		-- surround word under the cursor with round brackets ]]
+--[[ keymap("n", "))", "di(hPl2x", opts)   				-- remove round brackets around a word (not work perfectly) ]]
+--[[ keymap("n", "{{", "ciw{<C-r>\"}<ESC>", opts)   		-- surround word under the cursor with square brackets ]]
+--[[ keymap("n", "}}", "di{hPl2x", opts)   				-- remove square brackets around a word (not work perfectly) ]]
+--[[ keymap("n", "''", "ciw'<C-r>\"'<ESC>", opts)		-- surround word under the cursor with single quotaion mark ]]
+--[[ keymap("n", "\"\"", "ciw\"<C-r>\"\"<ESC>", opts)	-- surround word under the cursor with double quotaion mark ]]
+
+-- Surround Replacec (with basic VIM)
+--[[ keymap("n", "\"(", "vi\"xa(<C-r>\")<ESC>F\"xF\"x", opts) 	-- Replace double quoutes with round brackets around a word ]]
+--[[ keymap("n", "\")", "vi\"xa(<C-r>\")<ESC>F\"xF\"x", opts) 	-- Replace double quoutes with round brackets around a word ]]
+--[[ keymap("n", "(\"", "vi(xa\"<C-r>\"\"<ESC>F)xF(x", opts)		-- Replace round brackets with double quoutes around a word ]]
+--[[ keymap("n", ")\"", "vi(xa\"<C-r>\"\"<ESC>F)xF(x", opts)		-- Replace round brackets with double quoutes around a word ]]
+
 
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 -- Telescope 
