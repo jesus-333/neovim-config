@@ -5,7 +5,7 @@ local servers = {
 	"clangd",
 	"tsserver",
 	"html",
-	"cssls"
+	"cssls",
 }
 
 local settings = {
@@ -53,5 +53,4 @@ for _, server in pairs(servers) do
 end
 
 -- Separate setup (the setup of some servers don't work with the cycle)
--- require'lspconfig'.jedi_language_server.setup{}
-require'lspconfig'.grammarly.setup{ init_options = {clientId = "client_BaDkMgx4X19X9UxxYRCXZo"}}
+--[[ require'lspconfig'.grammarly.setup{ init_options = {clientId = "client_BaDkMgx4X19X9UxxYRCXZo"}} ]]

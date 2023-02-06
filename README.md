@@ -17,7 +17,7 @@ Put here as a reminder
   ```
   npm install -g pyright
   ```
-* [grammarly-languageserver](https://github.com/znck/grammarly)
+* [grammarly-languageserver](https://github.com/znck/grammarly) (Only install... never used)
   ```
   npm i -g grammarly-languageserver
   ```
