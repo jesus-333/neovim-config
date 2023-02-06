@@ -33,6 +33,15 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>v</kbd>: Enter visual character mode
 * <kbd>V</kbd> (<kbd>⇧ Shift</kbd> + <kbd>v</kbd>): Enter visual line mode
 * <kbd>ctrl</kbd> + <kbd>q</kbd>: Enter visual block mode
+###
+* <kbd>(</kbd> + <kbd>(</kbd>: Surround word under the cursor with round brackets
+* <kbd>)</kbd> + <kbd>)</kbd>: Remove round brackets around a word (not work perfectly)
+* <kbd>[</kbd> + <kbd>[</kbd>: Surround word under the cursor with square brackets (NOT WORK)
+* <kbd>]</kbd> + <kbd>]</kbd>: Remove square brackets around a word (not work perfectly) (NOT WORK)
+* <kbd>{</kbd> + <kbd>{</kbd>: Surround word under the cursor with square brackets
+* <kbd>}</kbd> + <kbd>}</kbd>: Remove square brackets around a word (not work perfectly)
+* <kbd>'</kbd> + <kbd>'</kbd>: Surround word under the cursor with single quotaion mark
+* <kbd>"</kbd> + <kbd>"</kbd>: Surround word under the cursor with double quotaion mark
 
 ## Insert mode
 <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode

@@ -81,6 +81,19 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Symbols-Outline
 keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
 
+-- nvim-surround
+--[[ keymap("n", "((", "ysiwb", opts)   -- Save file ]]
+
+-- Surround (with basic VIM)
+keymap("n", "((", "ciw(<C-r>\")<ESC>", opts)   		-- Surround word under the cursor with round brackets
+keymap("n", "))", "di(hPl2x", opts)   				-- Remove round brackets around a word (not work perfectly)
+keymap("n", "[[", "ciw[<C-r>\"]<ESC>", opts)   		-- Surround word under the cursor with square brackets (NOT WORK)
+keymap("n", "]]", "di[hPl2x", opts)   				-- Remove square brackets around a word (not work perfectly) (NOT WORK)
+keymap("n", "{{", "ciw{<C-r>\"}<ESC>", opts)   		-- Surround word under the cursor with square brackets
+keymap("n", "}}", "di{hPl2x", opts)   				-- Remove square brackets around a word (not work perfectly)
+keymap("n", "''", "ciw'<C-r>\"'<ESC>", opts)		-- Surround word under the cursor with single quotaion mark
+keymap("n", "\"\"", "ciw\"<C-r>\"\"<ESC>", opts)	-- Surround word under the cursor with double quotaion mark
+
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 -- Telescope 
 
