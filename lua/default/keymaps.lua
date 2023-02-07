@@ -42,12 +42,14 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down
 
+-- Search inside the file
+keymap("n", "ff", "yiw/<C-r>\"<CR>:noh<CR>", opts) -- Find the next occurence of the word under the cursor
+
 -- Other
 keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) 		-- Close the current buffer
 keymap("n", "<leader>w", ":w!<cr>", opts)   	-- Save file
 keymap("n", "<leader>z", ":LazyGit<CR>", opts) 	-- Open LazyGit
-vim.keymap.set("n", "--", "cc<ESC>33i- <ESC><ESC>gccP<ESC>", {remap = true, silent = true}) -- Insert a string of dash space char as comment
---[[ vim.keymap.set("n", "--", "cc<ESC>33i- <ESC><ESC>gccP<ESC>jVxA<CR><C-R>\"",{remap = true, silent = true}) -- Insert a string of dash space char as comment ]]
+vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap = true, silent = true}) -- Insert a string of dash space char as comment
 
 -- Insert --
 keymap("i", "jk", "<ESC>", opts) -- Press jk fast to enter
