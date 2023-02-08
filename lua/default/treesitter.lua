@@ -7,7 +7,8 @@ configs.setup {
 		"lua",
 		"python",
 		"markdown",
-		"javascript"
+		"javascript",
+		"json"
 	},
 	sync_install = false,
 	ignore_install = { "" }, -- List of parsers to ignore installing

@@ -9,6 +9,11 @@ A file containig the major part of keybindings can be find [here](keybindings.md
 # Stuff to install
 Put here as a reminder
 
+## Fix for bugs
+* If treesitter raise the error `query error: invalid node type at position` use the command `:echo usenvim_get_runtime_file('parser', v:true)` use in neovim console. If more that one path appear remove/rename all the folder not related with treesitter.
+
+## LSP stuff
+
 * [pyright](https://github.com/microsoft/pyright)
   ```
   conda install pyright

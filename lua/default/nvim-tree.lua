@@ -60,10 +60,10 @@ nvim_tree.setup {
 	-- Visual settings 
     view = {
         width = 30,
-        height = 30,
+        --[[ height = 30, ]] -- OLD
         hide_root_folder = false,
         side = "left",
-        auto_resize = true,
+        --[[ auto_resize = true, ]] -- OLD
         mappings = {
             custom_only = false,
             -- Costum keybinding
@@ -77,8 +77,10 @@ nvim_tree.setup {
         relativenumber = false,
     },
     actions = {
-        quit_on_open = true,
-        window_picker = { enable = true },
+		open_file = {
+			quit_on_open = true,
+			window_picker = { enable = true },
+		}
     },
     renderer = {
         highlight_git = true,
