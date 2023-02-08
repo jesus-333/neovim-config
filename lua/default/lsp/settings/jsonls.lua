@@ -1,4 +1,6 @@
 -- Find more schemas here: https://www.schemastore.org/json/
+-- This config is provided in https://github.com/LunarVim/Neovim-from-scratch repository
+
 local schemas = {
   {
     description = "TypeScript compiler configuration file",
