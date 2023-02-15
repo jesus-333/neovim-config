@@ -91,7 +91,7 @@ vim.keymap.set("n", "}}", 	"ds}", 	 {remap = true, silent = true})   	-- remove 
 vim.keymap.set("n", "\"\"", "ysiw\"",{remap = true, silent = true})		-- surround word under the cursor with single quotaion mark   	
 vim.keymap.set("n", "''", 	"ysiw'", {remap = true, silent = true})   	-- surround word under the cursor with double quotaion mark 	
 
--- Surround Replacec (with basic VIM)
+-- Surround Replace (nvim-surround)
 vim.keymap.set("n", "\"(", "cs\"(", {remap = true, silent = true}) 		-- Replace double quoutes with round brackets around a word
 vim.keymap.set("n", "\")", "cs\"(", {remap = true, silent = true}) 		-- Replace double quoutes with round brackets around a word
 vim.keymap.set("n", "(\"", "cs(\"", {remap = true, silent = true})		-- Replace round brackets with double quoutes around a word
@@ -107,7 +107,7 @@ vim.keymap.set("n", "'\"", "cs'\"", {remap = true, silent = true})		-- Replace d
 --[[ keymap("n", "''", "ciw'<C-r>\"'<ESC>", opts)		-- surround word under the cursor with single quotaion mark ]]
 --[[ keymap("n", "\"\"", "ciw\"<C-r>\"\"<ESC>", opts)	-- surround word under the cursor with double quotaion mark ]]
 
--- Surround Replacec (with basic VIM)
+-- Surround Replace (with basic VIM)
 --[[ keymap("n", "\"(", "vi\"xa(<C-r>\")<ESC>F\"xF\"x", opts) 	-- Replace double quoutes with round brackets around a word ]]
 --[[ keymap("n", "\")", "vi\"xa(<C-r>\")<ESC>F\"xF\"x", opts) 	-- Replace double quoutes with round brackets around a word ]]
 --[[ keymap("n", "(\"", "vi(xa\"<C-r>\"\"<ESC>F)xF(x", opts)		-- Replace round brackets with double quoutes around a word ]]
@@ -124,7 +124,10 @@ keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.fi
 -- With leader + t open the function to search through text
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 
+-- With leader + b open the list of current buffer
+keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+
 -- Telescope tab (Not installed)
 --[[ keymap("n", "<leader>t", "<cmd>:Telescope telescope-tabs list_tabs<cr>", opts) ]]
-
+keymap("n", "<leader>p", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>", opts)
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
