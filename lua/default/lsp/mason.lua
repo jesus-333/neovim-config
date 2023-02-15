@@ -1,6 +1,7 @@
 -- Server to config
 local servers = {
-	"sumneko_lua",
+	--[[ "sumneko_lua", ]]
+	"lua_ls",
 	"pyright",
 	"clangd",
 	"tsserver",
