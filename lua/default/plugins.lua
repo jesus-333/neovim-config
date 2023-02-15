@@ -53,6 +53,7 @@ return packer.startup(function(use)
 	use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session
 	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
 	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
+	use 'BlakeJC94/alpha-nvim-fortune'
 	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines).
 	--[[ use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP ]] -- NOT USED FOR NOW
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
@@ -99,7 +100,6 @@ return packer.startup(function(use)
 	-- Git 
 	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc 
 	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit
-	
 
 	-- Devicons
 	use 'nvim-tree/nvim-web-devicons'

@@ -2,7 +2,7 @@ local status_ok, project_nvim = pcall(require, "project_nvim")
 if not status_ok then
     return 
 else
-	print("Require project_nvim OK")
+	--[[ print("Require project_nvim OK") ]]
 end
 
 project_nvim.setup{
