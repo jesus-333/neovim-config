@@ -23,6 +23,10 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>w</kbd>: Next word (start of the next word)
 * <kbd>e</kbd>: Next word (end of the next word)
 * <kbd>ctrl</kbd> + <kbd>b</kbd>: Close the current buffer
+* <kbd>g</kbd> + <kbd>d</kbd>: Go to definition of the highlighted text under the cursor (require LSP)
+* <kbd>g</kbd> + <kbd>D</kbd>: Go to declaration of the highlighted text under the cursor (require LSP)
+* <kbd>]</kbd> + <kbd>d</kbd>: Go to next LSP error/warning/note in the file (require LSP)
+* <kbd>[</kbd> + <kbd>d</kbd>: Go to previous LSP error/warning/note in the file (require LSP)
 ### Yank (copy command)
 * <kbd>y</kbd> + <kbd>a</kbd> + <kbd>w</kbd>: copy the word currently selected
 * <kbd>y</kbd> + <kbd>a</kbd> + <kbd>s</kbd>: copy current sentence
@@ -33,7 +37,7 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>v</kbd>: Enter visual character mode
 * <kbd>V</kbd> (<kbd>⇧ Shift</kbd> + <kbd>v</kbd>): Enter visual line mode
 * <kbd>ctrl</kbd> + <kbd>q</kbd>: Enter visual block mode
-###
+### Surround commands
 * <kbd>(</kbd> + <kbd>(</kbd>: Surround word under the cursor with round brackets
 * <kbd>)</kbd> + <kbd>)</kbd>: Remove round brackets around a word (not work perfectly)
 * <kbd>[</kbd> + <kbd>[</kbd>: Surround word under the cursor with square brackets (NOT WORK)
@@ -44,6 +48,11 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>"</kbd> + <kbd>"</kbd>: Surround word under the cursor with double quotaion mark
 * <kbd>"</kbd> + <kbd>(</kbd> (or <kbd>"</kbd> + <kbd>)</kbd>): Replace double quoutes with round brackets around a word
 * <kbd>(</kbd> + <kbd>"</kbd> (or <kbd>)</kbd> + <kbd>"</kbd>): Replace brackets with round double quoutes around a word 
+### Other
+* <kbd>f</kbd> + <kbd>f</kbd>: Go the next istance of the highlighted word
+* <kbd>g</kbd> + <kbd>l</kbd>: Show info for LSP warning/error (require LSP)
+* <kbd>g</kbd> + <kbd>r</kbd>: Show a list of all the use of the highlighted word in the various files (require LSP)
+* <kbd>K</kbd> (<kbd>⇧ Shift</kbd> + <kbd>k</kbd>): Show info regarding the identifier under the cursor (require LSP)
 
 ## Insert mode
 <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode
