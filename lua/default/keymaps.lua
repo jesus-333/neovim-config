@@ -83,6 +83,9 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Symbols-Outline
 keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
 
+-- Trouble plugin
+vim.keymap.set("n", "tt", 	"<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
+
 -- Surround Add/remove (nvim-surround)
 vim.keymap.set("n", "((", 	"ysiw)", {remap = true, silent = true})   	-- surround word under the cursor with round brackets 	
 vim.keymap.set("n", "))", 	"ds)", 	 {remap = true, silent = true})   	-- remove round brackets around a word (not work perfectly)	
@@ -127,7 +130,6 @@ keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 -- With leader + b open the list of current buffer
 keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 
--- Telescope tab (Not installed)
---[[ keymap("n", "<leader>t", "<cmd>:Telescope telescope-tabs list_tabs<cr>", opts) ]]
+-- Telescope projects (require extension)
 keymap("n", "<leader>p", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>", opts)
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

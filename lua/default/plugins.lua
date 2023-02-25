@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	--[[ use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP ]] -- NOT USED FOR NOW
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
 	use "ahmedkhalf/project.nvim"				-- Project plugins
-
+	
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
 	use "SmiteshP/nvim-navic"		-- A simple statusline/winbar component that uses LSP to show your current code context (e.g. if you are inside a function the name of the function)
@@ -82,6 +82,7 @@ return packer.startup(function(use)
 		"williamboman/mason-lspconfig.nvim",	-- LSP Installer
 		"neovim/nvim-lspconfig" 				-- Enalbe LSP
 	}
+	use "folke/trouble.nvim"					-- List of all the LSP notifications in the files
 	
 	-- Colorscheme
 	use 'folke/tokyonight.nvim'

@@ -29,6 +29,7 @@ require "default.toggleterm"		-- Terminal plugin
 require "default.which-key"			-- Show keybinding
 require "default.alpha"				-- Greeter (default menu when open neovim)
 require "default.indentline"		-- Show Vertical line corresponding to the various level of indentation
---[[ require "default.flutter"			-- Flutter integratio ]] --(NOT USED FOR NOW)
 require "default.surround"			-- Surround stuff with brackets et similia
 require "default.project"			-- Setup of the project plugin
+require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
+--[[ require "default.flutter"			-- Flutter integratio ]] --(NOT USED FOR NOW)
