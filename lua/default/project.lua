@@ -1,8 +1,7 @@
 local status_ok, project_nvim = pcall(require, "project_nvim")
 if not status_ok then
+	print("ERROR: project_nvim")
     return 
-else
-	print("Require project_nvim OK")
 end
 
 project_nvim.setup{

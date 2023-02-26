@@ -32,3 +32,4 @@ require "default.indentline"		-- Show Vertical line corresponding to the various
 --[[ require "default.flutter"			-- Flutter integratio ]] --(NOT USED FOR NOW)
 require "default.surround"			-- Surround stuff with brackets et similia
 require "default.project"			-- Setup of the project plugin
+require "default.obsidian"			-- Integration with obsidian notes
