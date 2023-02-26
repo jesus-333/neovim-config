@@ -53,6 +53,7 @@ return packer.startup(function(use)
 	use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session
 	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
 	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
+	use 'BlakeJC94/alpha-nvim-fortune'
 	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines).
 	--[[ use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP ]] -- NOT USED FOR NOW
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
@@ -82,7 +83,8 @@ return packer.startup(function(use)
 		"williamboman/mason-lspconfig.nvim",	-- LSP Installer
 		"neovim/nvim-lspconfig" 				-- Enalbe LSP
 	}
-	
+	use "folke/trouble.nvim"					-- List of all the LSP notifications in the files
+
 	-- Colorscheme
 	use 'folke/tokyonight.nvim'
 	use "lunarvim/darkplus.nvim"
@@ -92,19 +94,18 @@ return packer.startup(function(use)
 	use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files
 	use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files
 
-	-- Treesitter 
+	-- Treesitter
 	use	"nvim-treesitter/nvim-treesitter" 				-- Treesitter main repository
 	use "p00f/nvim-ts-rainbow" 							-- Plugin for Treesitter for nested parenthesis
 	use 'JoosepAlviste/nvim-ts-context-commentstring' 	-- Use treesitter queries to create comments based on the context of the file
 
-	-- Git 
-	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc 
+	-- Git
+	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc
 	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit
-	
 
 	-- Devicons
 	use 'nvim-tree/nvim-web-devicons'
-	
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

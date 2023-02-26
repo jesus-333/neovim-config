@@ -4,23 +4,23 @@
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
 	print("ERROR: nvim-tree")
-    return 
+    return
 end
 
 local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 if not config_status_ok then
     return 2
 else
-	print("Require nvim-tree.config OK")
+	--[[ print("Require nvim-tree.config OK") ]]
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-    disable_netrw = true, -- Disable defualt file explore 
+    disable_netrw = true, -- Disable defualt file explore
     hijack_netrw = true,
     open_on_setup = false,
-	
+
 	-- File that nvim_tree ignore
     ignore_ft_on_setup = {
         "startify",
@@ -58,7 +58,7 @@ nvim_tree.setup {
 		show_on_dirs = true,	-- Show status icons of children when directory itself has no status icon
         timeout = 500
     },
-	-- Visual settings 
+	-- Visual settings
     view = {
         width = 30,
         --[[ height = 30, ]] -- OLD
