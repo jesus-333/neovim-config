@@ -7,6 +7,7 @@ configs.setup {
 		"lua",
 		"python",
 		"markdown",
+		"markdown_inline",
 		"javascript",
 		"json"
 	},
