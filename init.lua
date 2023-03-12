@@ -13,7 +13,6 @@ require "default.colorscheme"
 -- Autocompletion and LSP
 require "default.cmp"
 require "default.lsp"
---require "default.kite"
 
 -- Plugin settings
 require "default.telescope"			-- Telescope (Search between text/File)
@@ -33,4 +32,3 @@ require "default.surround"			-- Surround stuff with brackets et similia
 require "default.project"			-- Setup of the project plugin
 require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
 require "default.obsidian"			-- Integration with obsidian notes
---[[ require "default.flutter"			-- Flutter integratio ]] --(NOT USED FOR NOW)
