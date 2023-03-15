@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	--[[ use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP ]] -- NOT USED FOR NOW
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
 	use "ahmedkhalf/project.nvim"				-- Project plugins
-	use "epwalsh/obsidian.nvim"					-- Obsidian integrarion
+	--[[ use "epwalsh/obsidian.nvim"					-- Obsidian integrarion ]]
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.

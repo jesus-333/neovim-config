@@ -31,4 +31,4 @@ require "default.indentline"		-- Show Vertical line corresponding to the various
 require "default.surround"			-- Surround stuff with brackets et similia
 require "default.project"			-- Setup of the project plugin
 require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
-require "default.obsidian"			-- Integration with obsidian notes
+--[[ require "default.obsidian"			-- Integration with obsidian notes ]]
