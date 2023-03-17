@@ -3,6 +3,9 @@ Pure lua Configuration for Neovim editor
 
 Based on [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) from [LunarVim](https://github.com/LunarVim).
 
+![](./other/screenshot/nvim (1).png) |  ![](./other/screenshot/nvim (2).png)
+:-------------------------:|:-------------------------:
+
 # Keybindings
 A file containig the major part of keybindings can be find [here](other/keybindings.md)
 
