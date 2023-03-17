@@ -5,7 +5,7 @@ Based on [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch) 
 
 ![Start screen](./other/screenshot/nvim_1.png) |  ![Edit File](./other/screenshot/nvim_2.png)
 :-------------------------:|:-------------------------:
-![telescope](./other/screenshot/nvim_3.png) |  
+![telescope](./other/screenshot/nvim_3.png) |  ![lazygit](./other/screenshot/nvim_4.png) 
 
 # Keybindings
 A file containig the major part of keybindings can be find [here](other/keybindings.md)
