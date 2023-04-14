@@ -8,6 +8,7 @@ local servers = {
 	"html",
 	"cssls",
 	"jsonls",
+	"rust_analyzer",
 }
 
 local settings = {
