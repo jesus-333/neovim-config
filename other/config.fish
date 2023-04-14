@@ -22,4 +22,5 @@ if type -q exa
 	alias llt "exa -T --icons"
 end
 
+# CARGO for Rust
 set -x PATH $PATH ~/.cargo/bin/
