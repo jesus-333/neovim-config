@@ -21,3 +21,5 @@ if type -q exa
 	alias lla "ll -a"
 	alias llt "exa -T --icons"
 end
+
+set -x PATH $PATH ~/.cargo/bin/
