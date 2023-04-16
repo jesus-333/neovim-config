@@ -91,8 +91,9 @@ vim.keymap.set("n", "((", 	"ysiw)", {remap = true, silent = true})   	-- surroun
 vim.keymap.set("n", "))", 	"ds)", 	 {remap = true, silent = true})   	-- remove round brackets around a word (not work perfectly)	
 vim.keymap.set("n", "{{", 	"ysiw}", {remap = true, silent = true})   	-- surround word under the cursor with square brackets	
 vim.keymap.set("n", "}}", 	"ds}", 	 {remap = true, silent = true})   	-- remove square brackets around a word (not work perfectly 	
-vim.keymap.set("n", "\"\"", "ysiw\"",{remap = true, silent = true})		-- surround word under the cursor with single quotaion mark   	
-vim.keymap.set("n", "''", 	"ysiw'", {remap = true, silent = true})   	-- surround word under the cursor with double quotaion mark 	
+vim.keymap.set("n", "\"\"", "ysiw\"",{remap = true, silent = true})		-- surround word under the cursor with double quotaion mark   	
+vim.keymap.set("n", "''", 	"ysiw'", {remap = true, silent = true})   	-- surround word under the cursor with single quotaion mark 	
+vim.keymap.set("n", "``", 	"ysiw`", {remap = true, silent = true})   	-- surround word under the cursor with backtick	
 
 -- Surround Replace (nvim-surround)
 vim.keymap.set("n", "\"(", "cs\"(", {remap = true, silent = true}) 		-- Replace double quoutes with round brackets around a word
