@@ -50,6 +50,8 @@ keymap("n", "<C-b>", "<Esc>:bd<CR>", opts) 		-- Close the current buffer
 keymap("n", "<leader>w", ":w!<cr>", opts)   	-- Save file
 keymap("n", "<leader>z", ":LazyGit<CR>", opts) 	-- Open LazyGit
 vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap = true, silent = true}) -- Insert a string of dash space char as comment
+keymap("n", "<C-s>", ":SymbolsOutline<cr>", opts) -- Symbols-Outline
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) -- Nvimtree
 
 -- Insert --
 keymap("i", "jk", "<ESC>", opts) -- Press jk fast to enter
@@ -76,12 +78,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 --[[ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts) ]]
 --[[ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts) ]]
 --[[ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts) ]]
-
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
--- Symbols-Outline
-keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
 
 -- Trouble plugin
 vim.keymap.set("n", "tt", 	"<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
@@ -124,6 +120,11 @@ vim.keymap.set("n", "'\"", "cs'\"", {remap = true, silent = true})		-- Replace d
 -- With leader (space) + f open the telescope default file finder with some option
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.file_browser()<cr>", opts)
+
+-- List of symbols in the file
+keymap("n", "<leader>1", "<cmd> Telescope lsp_document_symbols symbols=function<cr>", opts)
+keymap("n", "<leader>2", "<cmd> Telescope lsp_document_symbols symbols=variable<cr>", opts)
+-- require'telescope.builtin'.lsp_document_symbols({symbols = 'function'}) -- Equivalent command in lua script
 
 -- With leader + t open the function to search through text
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
