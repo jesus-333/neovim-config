@@ -69,8 +69,15 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 
 ## Telescope
 * <kbd>Leader</kbd> + <kbd>f</kbd>: Search between files with default telescope
-* <kbd>Leader</kbd> + <kbd>F</kbd> (<kbd>Leader</kbd> + <kbd>⇧ Shift</kbd> + <kbd>f</kbd>): Search between files ([telescope-file-browser][telescope-file-browser] plugin)
 * <kbd>Leader</kbd> + <kbd>t</kbd>: Live grep search (i.e. search in text inside files)
+* <kbd>Leader</kbd> + <kbd>s</kbd> + <kbd>1</kbd>: Show all function inside the open file
+* <kbd>Leader</kbd> + <kbd>s</kbd> + <kbd>2</kbd>: Show all the variables (and constants) inside the open file
+* <kbd>Leader</kbd> + <kbd>b</kbd> + <kbd>b</kbd>: Show the open buffers (tabs)
+* <kbd>Leader</kbd> + <kbd>b</kbd> + <kbd>o</kbd>: Show the files open in past
+* <kbd>Leader</kbd> + <kbd>b</kbd> + <kbd>r</kbd>: Show the [register][vim_register]
+* <kbd>Leader</kbd> + <kbd>b</kbd> + <kbd>p</kbd>: Show the list of project (need the [project][project-plugin] plugin and the [telescope extension][project-plugin-telescope]) 
+### Telescope file broweser plugin
+* <kbd>Leader</kbd> + <kbd>F</kbd> (<kbd>Leader</kbd> + <kbd>⇧ Shift</kbd> + <kbd>f</kbd>): Search between files ([telescope-file-browser][telescope-file-browser] plugin)
 * <kbd>d</kbd> (or  <kbd>Alt</kbd> + <kbd>d</kbd>): remove selected file ([telescope-file-browser][telescope-file-browser] plugin)
 * <kbd>c</kbd> (or  <kbd>Alt</kbd> + <kbd>c</kbd>): create file in current location ([telescope-file-browser][telescope-file-browser] plugin)
 
@@ -93,3 +100,6 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 
 [telescope-file-browser]:https://github.com/nvim-telescope/telescope-file-browser.nvim
 [comments_plugin]:https://github.com/numToStr/Comment.nvim
+[vim_register]: https://www.brianstorti.com/vim-registers/
+[project-plugin]: https://github.com/ahmedkhalf/project.nvim
+[project-plugin-telescope]: https://github.com/nvim-telescope/telescope-project.nvim
