@@ -122,10 +122,10 @@ keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require
 keymap("n", "<leader>F", "<cmd>lua require'telescope'.extensions.file_browser.file_browser()<cr>", opts)
 
 -- List of symbols in the file
-keymap("n", "<leader>1", "<cmd> Telescope lsp_document_symbols symbols=function,method<cr>", opts)
+keymap("n", "<leader>s1", "<cmd> Telescope lsp_document_symbols symbols=function,method<cr>", opts)
 --[[ keymap("n", "<leader>1", "<cmd> Telescope lsp_document_symbols theme=dropdown previewer=false symbols=function<cr>", opts) ]]
 --[[ keymap("n", "<leader>1", "<cmd> lua require'telescope.builtin'.lsp_document_symbols({symbols = 'function', previewer = false, theme=dropdown})<cr>", opts) ]]
-keymap("n", "<leader>2", "<cmd> Telescope lsp_document_symbols symbols=variable,constant<cr>", opts)
+keymap("n", "<leader>s2", "<cmd> Telescope lsp_document_symbols symbols=variable,constant<cr>", opts)
 
 -- With leader + t open the function to search through text
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
