@@ -67,6 +67,7 @@ keymap("v", "<leader>yw","\"wy", opts)
 keymap("v", "<leader>yx","\"xy", opts)
 keymap("v", "<leader>yy","\"yy", opts)
 keymap("v", "<leader>yz","\"zy", opts)
+
 -- Past from register
 keymap("n", "<leader>pa", "\"ap", opts)
 keymap("n", "<leader>pb", "\"bp", opts)
