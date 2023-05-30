@@ -6,15 +6,15 @@ require("tokyonight").setup({
 	transparent = false, -- Enable this to disable setting the background color
 	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 	styles = {
-	-- Style to be applied to different syntax groups
-	-- Value is any valid attr-list value for `:help nvim_set_hl`
-	comments = { italic = true },
-	keywords = { italic = true },
-	functions = {},
-	variables = {},
-	-- Background styles. Can be "dark", "transparent" or "normal"
-	sidebars = "dark", -- style for sidebars, see below
-	floats = "dark", -- style for floating windows
+		-- Style to be applied to different syntax groups
+		-- Value is any valid attr-list value for `:help nvim_set_hl`
+		comments = { italic = true },
+		keywords = { italic = true },
+		functions = {},
+		variables = {},
+		-- Background styles. Can be "dark", "transparent" or "normal"
+		sidebars = "dark", -- style for sidebars, see below
+		floats = "dark", -- style for floating windows
 	},
 	sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
 	day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
@@ -34,7 +34,14 @@ require("tokyonight").setup({
 	--- function will be called with a Highlights and ColorScheme table
 	---@param highlights Highlights
 	---@param colors ColorScheme
-	on_highlights = function(highlights, colors) end,
+	on_highlights = function(highlights, colors) 
+		highlights.LineNr = {
+			fg = '#696969'
+		}
+		highlights.CursorLineNr = {
+			fg = colors.red
+		}
+	end,
 })
 
 -- Set colorscheme
