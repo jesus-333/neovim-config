@@ -14,14 +14,23 @@ The list of features include:
 - [Lazygit integration](lazygit)
 - [Shell integration](toggleterm)
 - [Surround](surround) plugin (with custom keybindings)
-- [Project integration](project)
+- [Project integration]()
 
 # Keybindings
 A file containig the major part of keybindings can be find [here](other/keybindings.md)
 
 # Fix for bugs
-* If treesitter raise the error `query error: invalid node type at position` use the command `:echo nvim_get_runtime_file('parser', v:true)` in neovim console. If more that one path appear remove/rename all the folder not related with treesitter.
+## Treesitter parser error
+If treesitter raise the error `query error: invalid node type at position` use the command `:echo nvim_get_runtime_file('parser', v:true)` in neovim console. If more that one path appear remove/rename all the folder not related with treesitter.
 
+## Latest neovim version
+If you do not want to build neovim you can download the latest version through this commands:
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
 [telescope-file-browser]:https://github.com/nvim-telescope/telescope-file-browser.nvim
 [comments_plugin]:https://github.com/numToStr/Comment.nvim
 [mason_LSP]:https://github.com/williamboman/mason-lspconfig.nvim
