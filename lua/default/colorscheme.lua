@@ -27,7 +27,8 @@ require("tokyonight").setup({
 	---@param colors ColorScheme
 	on_colors = function(colors)
 		colors.comment = "#5aff3d"
-		--[[ colors.comment = "#87bf7d" ]]
+		colors.terminal_black = '#c0caf5' -- Variable not used
+		colors.fg = '#FFFFFF' -- Normal text
 	end,
 
 	--- You can override specific highlights to use other groups or a hex color

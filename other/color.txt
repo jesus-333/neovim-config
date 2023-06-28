@@ -1,0 +1,100 @@
+List of stuff with their color
+
+diff table: 0x415435d8
+purple #9d7cd8
+bg_highlight #292e42
+dark3 #545c7e
+blue5 #89ddff
+cyan #7dcfff
+dark5 #737aa2
+none NONE
+hint #1abc9c
+bg_float #1f2335
+comment #5aff3d
+red1 #db4b4b
+info #0db9d7
+orange #ff9e64
+bg_sidebar #1f2335
+green2 #41a6b5
+git table: 0x4154fa98
+delta table: 0x416ed740
+fg_gutter #3b4261
+bg_visual #2e3c64
+warning #e0af68
+error #db4b4b
+fg_float #c0caf5
+fg #FFFFFF
+fg_sidebar #a9b1d6
+border #1d202f
+bg_search #3d59a1
+bg #24283b
+green #9ece6a
+magenta #bb9af7
+bg_statusline #1f2335
+black #1d202f
+blue #7aa2f7
+bg_popup #1f2335
+fg_dark #a9b1d6
+magenta2 #ff007c
+blue2 #0db9d7
+red #f7768e
+border_highlight #29a4bd
+gitSigns table: 0x4154fa70
+teal #1abc9c
+blue7 #394b70
+terminal_black #c0caf5#
+blue1 #2ac3de
+green1 #73daca
+yellow #e0af68
+bg_dark #1f2335
+blue6 #b4f9f8
+blue0 #3d59a1
+diff table: 0x407674b8
+purple #9d7cd8
+bg_highlight #292e42
+dark3 #545c7e
+blue5 #89ddff
+cyan #7dcfff
+dark5 #737aa2
+none NONE
+hint #1abc9c
+bg_float #1f2335
+comment #5aff3d
+red1 #db4b4b
+info #0db9d7
+orange #ff9e64
+bg_sidebar #1f2335
+green2 #41a6b5
+git table: 0x40765e58
+delta table: 0x40769568
+fg_gutter #3b4261
+bg_visual #2e3c64
+warning #e0af68
+error #db4b4b
+fg_float #c0caf5
+fg #FFFFFF
+fg_sidebar #a9b1d6
+border #1d202f
+bg_search #3d59a1
+bg #24283b
+green #9ece6a
+magenta #bb9af7
+bg_statusline #1f2335
+black #1d202f
+blue #7aa2f7
+bg_popup #1f2335
+fg_dark #a9b1d6
+magenta2 #ff007c
+blue2 #0db9d7
+red #f7768e
+border_highlight #29a4bd
+gitSigns table: 0x40765d90
+teal #1abc9c
+blue7 #394b70
+terminal_black #c0caf5#
+blue1 #2ac3de
+green1 #73daca
+yellow #e0af68
+bg_dark #1f2335
+blue6 #b4f9f8
+blue0 #3d59a1
