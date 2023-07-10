@@ -34,6 +34,8 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>y</kbd> + <kbd>i</kbd> + <kbd>b</kbd>: copy INSIDE block (excluded block delimiters)  
 * <kbd>y</kbd> + <kbd>a</kbd> + <kbd>(</kbd> (or <kbd>y</kbd> + <kbd>a</kbd> + <kbd>)</kbd>): copy text inside curved brackets, WITH bracktes
 * <kbd>y</kbd> + <kbd>i</kbd> + <kbd>(</kbd> (or <kbd>y</kbd> + <kbd>a</kbd> + <kbd>)</kbd>): copy text inside curved brackets, WITHOUT bracktes
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>"</kbd>: same as <kbd>y</kbd> + <kbd>a</kbd> + <kbd>(</kbd> but with double quotes
+* <kbd>y</kbd> + <kbd>i</kbd> + <kbd>"</kbd>: same as <kbd>y</kbd> + <kbd>i</kbd> + <kbd>(</kbd> but with double quotes
 ### Change mode
 * <kbd>i</kbd>: Enter in insert mode before the cursor
 * <kbd>a</kbd>: Enter in insert mode after the cursor
