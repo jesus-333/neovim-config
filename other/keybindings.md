@@ -30,7 +30,10 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 ### Yank (copy command)
 * <kbd>y</kbd> + <kbd>a</kbd> + <kbd>w</kbd>: copy the word currently selected
 * <kbd>y</kbd> + <kbd>a</kbd> + <kbd>s</kbd>: copy current sentence
-* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>b</kbd>: copy block (i.e. inside parenthesis)
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>b</kbd>: copy block (including block delimiters)
+* <kbd>y</kbd> + <kbd>i</kbd> + <kbd>b</kbd>: copy INSIDE block (excluded block delimiters)  
+* <kbd>y</kbd> + <kbd>a</kbd> + <kbd>(</kbd> (or <kbd>y</kbd> + <kbd>a</kbd> + <kbd>)</kbd>): copy text inside curved brackets, WITH bracktes
+* <kbd>y</kbd> + <kbd>i</kbd> + <kbd>(</kbd> (or <kbd>y</kbd> + <kbd>a</kbd> + <kbd>)</kbd>): copy text inside curved brackets, WITHOUT bracktes
 ### Change mode
 * <kbd>i</kbd>: Enter in insert mode before the cursor
 * <kbd>a</kbd>: Enter in insert mode after the cursor
@@ -48,11 +51,16 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>"</kbd> + <kbd>"</kbd>: Surround word under the cursor with double quotaion mark
 * <kbd>"</kbd> + <kbd>(</kbd> (or <kbd>"</kbd> + <kbd>)</kbd>): Replace double quoutes with round brackets around a word
 * <kbd>(</kbd> + <kbd>"</kbd> (or <kbd>)</kbd> + <kbd>"</kbd>): Replace brackets with round double quoutes around a word 
+### Toggle terminal
+* <kbd>ctrl</kbd> + <kbd>\\</kbd>: Open/close terminal
+* <kbd>ctrl</kbd> + <kbd>e</kbd>: Send the current line to terminal (works also in visual mode)
 ### Other
 * <kbd>f</kbd> + <kbd>f</kbd>: Go the next istance of the highlighted word
 * <kbd>g</kbd> + <kbd>l</kbd>: Show info for LSP warning/error (require LSP)
 * <kbd>g</kbd> + <kbd>r</kbd>: Show a list of all the use of the highlighted word in the various files (require LSP)
 * <kbd>K</kbd> (<kbd>⇧ Shift</kbd> + <kbd>k</kbd>): Show info regarding the identifier under the cursor (require LSP)
+* <kbd>Leader</kbd> + <kbd>w</kbd>: Save file
+* <kbd>Leader</kbd> + <kbd>z</kbd>: Open Lazygit
 
 ## Insert mode
 <kbd>j</kbd> + <kbd>k</kbd>: shortcut to normal mode
@@ -64,8 +72,7 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>Alt</kbd> + <kbd>j</kbd>: Move selected line(s) down
 * <kbd>g</kbd> + <kbd>c</kbd>: Comment current selection using linewise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
 * <kbd>g</kbd> + <kbd>b</kbd>: Comment current selection using blockwise comment ([numToStr/Comment.nvim][comments_plugin] plugin)
-* <kbd>Leader</kbd> + <kbd>w</kbd>: Save file
-* <kbd>Leader</kbd> + <kbd>z</kbd>: Open Lazygit
+* <kbd>ctrl</kbd> + <kbd>e</kbd>: Send the text selected in visual model to the console
 
 ## Telescope
 * <kbd>Leader</kbd> + <kbd>f</kbd>: Search between files with default telescope
