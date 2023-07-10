@@ -5,7 +5,6 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-
 -- Default neovim file explorer
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
@@ -33,3 +32,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Trouble plugin
 vim.keymap.set("n", "tt", 	"<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
 
+-- Toggle Terminal
+-- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
+keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts)
+keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts)
