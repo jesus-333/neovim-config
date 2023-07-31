@@ -36,3 +36,7 @@ vim.keymap.set("n", "tt", 	"<cmd>TroubleToggle document_diagnostics<cr>", {norem
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
 keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts)
 keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts)
+
+-- Replace Text
+keymap("n", "<leader>r1", ":%s/", opts)
+keymap("n", "<leader>r2", ":s/", opts)
