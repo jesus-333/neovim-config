@@ -25,15 +25,3 @@ vim.api.nvim_create_user_command("ExecutePython", function ()
 	end
 end, {})
 
-local buffer_to_string = function()
-	local content = vim.api.nvim_buf_get_lines(0, 0, vim.api.nvim_buf_line_count(0), false)
-	return table.concat(content, "\n")
-end
-
-vim.api.nvim_create_user_command("Test", function ()
-	local content = vim.api.nvim_buf_get_lines(0, 0, vim.api.nvim_buf_line_count(0), false)
-	print(content)
-
-	local line_number, _ = unpack(vim.api.nvim_win_get_cursor(0))
-	print(r)
-end, {})
