@@ -1,7 +1,6 @@
 -- Server to config
 local servers = {
 	--[[ "sumneko_lua", ]]
-	"lua_ls",
 	"pyright",
 	"clangd",
 	"tsserver",
@@ -9,6 +8,7 @@ local servers = {
 	"cssls",
 	"jsonls",
 	"rust_analyzer",
+	"lua_ls",
 }
 
 local settings = {
