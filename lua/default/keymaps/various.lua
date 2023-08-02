@@ -40,3 +40,6 @@ keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts)
 -- Replace Text
 keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
+
+-- Execute code
+keymap("n", "<leader>x1", ":ExecutePython<CR>", opts)
