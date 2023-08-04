@@ -9,7 +9,7 @@ vim.api.nvim_create_user_command("ReloadConfig", function()
   vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end, {})
 
-vim.api.nvim_create_user_command("ExecutePython", function ()
+function _G.execute_python()
 	local filename = vim.api.nvim_buf_get_name(0)
 	if string.match(filename, ".py") then
 		vim.fn.jobstart({"python", filename}, {
@@ -23,5 +23,7 @@ vim.api.nvim_create_user_command("ExecutePython", function ()
 	else
 		print("Not a python file")
 	end
-end, {})
+end
+
+vim.api.nvim_create_user_command("ExecutePython", execute_python, {})
 
