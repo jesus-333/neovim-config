@@ -1,16 +1,3 @@
-local concat_string_array = function(string_array)
-	local concat_string = ""
-	for i in pairs(string_array) do
-		local line = string_array[i]
-		local blank = (line == nil or #string.gsub(line, "^%s*(.-)%s*$", "%1") == 0)
-		if not blank then
-			concat_string = concat_string .. line .. "\n"
-		end
-	end
-	return concat_string
-
-end
-
 -- Read all the text between two delimiter in the current buffer and return it as a single string
 -- The text read will be between the delimiter above the cursor and belove the cursor
 function _G.read_block(block_delimiter)
