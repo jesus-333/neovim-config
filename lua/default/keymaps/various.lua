@@ -42,4 +42,4 @@ keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
 
 -- Execute code
-keymap("n", "<leader>x1", ":ExecutePython<CR>", opts)
+keymap("n", "<C-x>", ":ExecutePython<CR>", opts)

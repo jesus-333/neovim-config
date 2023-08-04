@@ -27,6 +27,11 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 
+-- Open/close splits
+keymap("n", "<C-s>v", ":vsplit<CR>", opts)
+keymap("n", "<C-s>h", ":split<CR>", opts)
+keymap("n", "<C-s>c", ":close<CR>", opts)
+
 -- Jump
 vim.keymap.set("n", "mk", "[m", {remap = true, silent = true})   	--  Move to the previous method (works in python)	
 vim.keymap.set("n", "mj", "]m", {remap = true, silent = true})   	--  Move to the next method (works in python) 	
