@@ -29,10 +29,10 @@ function _G.read_block_spyder()
 	return block_text
 end
 
-vim.api.nvim_create_user_command("Test", function ()
-	vim.cmd('vsplit')
-	local win = vim.api.nvim_get_current_win()
-	local buf = vim.api.nvim_create_buf(true, true)
-	vim.api.nvim_win_set_buf(win, buf)
-end, {})
+--[[ vim.api.nvim_create_user_command("Test", function () ]]
+--[[ 	vim.cmd('vsplit') ]]
+--[[ 	local win = vim.api.nvim_get_current_win() ]]
+--[[ 	local buf = vim.api.nvim_create_buf(true, true) ]]
+--[[ 	vim.api.nvim_win_set_buf(win, buf) ]]
+--[[ end, {}) ]]
 

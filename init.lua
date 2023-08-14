@@ -32,4 +32,3 @@ require "default.surround"			-- Surround stuff with brackets et similia
 require "default.project"			-- Setup of the project plugin
 require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
 require "default.function"
-

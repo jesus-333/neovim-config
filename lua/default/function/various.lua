@@ -23,3 +23,11 @@ function _G.concat_string_array(string_array)
 
 end
 
+function _G.test()
+	local status_ok, toggleterm = pcall(require, "toggleterm")
+	if not status_ok then
+		print("toggleterm NOT INSTALLED")
+		return
+	end
+	
+end

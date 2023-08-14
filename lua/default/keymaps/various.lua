@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -41,5 +40,8 @@ keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts)
 keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
 
--- Execute code
-keymap("n", "<C-x>", ":ExecutePython<CR>", opts)
+-- Execute custom function
+keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code
+keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
+keymap("n", "<F10>", ":ToggleTerm<CR>ipython<CR>", opts) -- Open terminal and start ipython 
+keymap("n", "<F9>", ":ToggleTerm<CR><CR><C-C>exit<CR>", opts) -- open terminal and close ipython
