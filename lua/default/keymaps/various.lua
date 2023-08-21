@@ -22,14 +22,11 @@ keymap("n", "<leader>z", ":LazyGit<CR>", opts)
 -- Insert a string of dash space char as comment
 vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap = true, silent = true})
 
--- Symbols-Outline
-keymap("n", "<C-s>", ":SymbolsOutline<cr>", opts)
-
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Trouble plugin
-vim.keymap.set("n", "tt", 	"<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
+vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
 
 -- Toggle Terminal
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
