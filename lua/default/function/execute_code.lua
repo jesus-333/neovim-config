@@ -31,4 +31,3 @@ function _G.execute_python()
 end
 
 vim.api.nvim_create_user_command("ExecutePython", execute_python, {})
-
