@@ -6,8 +6,8 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Move text up and down
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down
+--[[ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down ]]
+--[[ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up ]]
 
 -- Insert --
 keymap("i", "jk", "<ESC>", opts) -- Press jk fast to enter
