@@ -58,8 +58,7 @@ return packer.startup(function(use)
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
-	--[[ use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'} -- Build flutter and dart applications in neovim using the native LSP ]] -- NOT USED FOR NOW
-	--[[ use "epwalsh/obsidian.nvim"					-- Obsidian integrarion ]]
+	use 'ThePrimeagen/harpoon'
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
@@ -100,6 +99,7 @@ return packer.startup(function(use)
 	use "p00f/nvim-ts-rainbow" 							-- Plugin for Treesitter for nested parenthesis
 	use 'JoosepAlviste/nvim-ts-context-commentstring' 	-- Use treesitter queries to create comments based on the context of the file
 	use 'nvim-treesitter/nvim-treesitter-context'		-- Use treesitter to show the current context (e.g. the function you are inside at the moment)
+
 	-- Git
 	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc
 	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit

@@ -21,7 +21,7 @@ require "default.autopairs"			-- Brackets automatic closure
 require "default.lualine"			-- lualine statusbar
 require "default.comments"			-- Comments plugin (add command to comments line(s))
 require "default.gitsign"			-- Gitsign (show diff and other stuff)
-require "default.nvim-tree-config"	-- nvim-tree (file explorer)
+require "default.nvim-tree-setup"	-- nvim-tree (file explorer)
 require "default.vim-illuminate"	-- vim-illuminate (text highlight)
 require "default.symbols-outline"	-- List of symbols (e.g. variable name)
 require "default.toggleterm"		-- Terminal plugin
