@@ -35,7 +35,7 @@ vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {norema
 
 -- Send text to tmux
 keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts)
-keymap("v", "<C-e>", ":lua send_visual_selection(1)<cr>", opts)
+keymap("v", "<C-e>", ":SendYankedTextIpython<cr>", opts)
 
 -- Replace Text
 keymap("n", "<leader>r1", ":%s/", opts)
