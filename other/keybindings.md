@@ -53,9 +53,9 @@ The <kbd>Leader</kbd> key for me is the <kbd>Space</kbd> key
 * <kbd>"</kbd> + <kbd>"</kbd>: Surround word under the cursor with double quotaion mark
 * <kbd>"</kbd> + <kbd>(</kbd> (or <kbd>"</kbd> + <kbd>)</kbd>): Replace double quoutes with round brackets around a word
 * <kbd>(</kbd> + <kbd>"</kbd> (or <kbd>)</kbd> + <kbd>"</kbd>): Replace brackets with round double quoutes around a word 
-### Toggle terminal
-* <kbd>ctrl</kbd> + <kbd>\\</kbd>: Open/close terminal
-* <kbd>ctrl</kbd> + <kbd>e</kbd>: Send the current line to terminal (works also in visual mode)
+<!-- ### Toggle terminal -->
+<!-- * <kbd>ctrl</kbd> + <kbd>\\</kbd>: Open/close terminal -->
+<!-- * <kbd>ctrl</kbd> + <kbd>e</kbd>: Send the current line to terminal (works also in visual mode) -->
 ### Other
 * <kbd>f</kbd> + <kbd>f</kbd>: Go the next istance of the highlighted word
 * <kbd>g</kbd> + <kbd>l</kbd>: Show info for LSP warning/error (require LSP)

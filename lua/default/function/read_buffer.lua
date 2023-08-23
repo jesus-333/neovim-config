@@ -1,7 +1,7 @@
--- Read all the text between two delimiter in the current buffer and return it as a single string
--- The text read will be between the delimiter above the cursor and belove the cursor
 function _G.read_block(block_delimiter)
-
+	-- Read all the text between two delimiter in the current buffer and return it as a single string
+	-- The text read will be between the delimiter above the cursor and belove the cursor
+	
 	local all_buffer_content = vim.api.nvim_buf_get_lines(0, 0, vim.api.nvim_buf_line_count(0), false)
 
 	local cursor_line_number, _ = unpack(vim.api.nvim_win_get_cursor(0))
@@ -29,10 +29,10 @@ function _G.read_block_spyder()
 	return block_text
 end
 
---[[ vim.api.nvim_create_user_command("Test", function () ]]
---[[ 	vim.cmd('vsplit') ]]
---[[ 	local win = vim.api.nvim_get_current_win() ]]
---[[ 	local buf = vim.api.nvim_create_buf(true, true) ]]
---[[ 	vim.api.nvim_win_set_buf(win, buf) ]]
---[[ end, {}) ]]
 
+function _G.get_text_visual_selection()
+	local line_start = vim.fn.getpos("'<")[2]
+	local line_end = vim.fn.getpos("'>")[2]
+
+	return concat_string_array(vim.fn.getline(line_start, line_end))
+end

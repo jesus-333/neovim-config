@@ -30,8 +30,12 @@ vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {norema
 
 -- Toggle Terminal
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
-keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts)
-keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts)
+--[[ keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts) ]]
+--[[ keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts) ]]
+
+-- Send text to tmux
+keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts)
+keymap("v", "<C-e>", ":lua send_visual_selection(1)<cr>", opts)
 
 -- Replace Text
 keymap("n", "<leader>r1", ":%s/", opts)
