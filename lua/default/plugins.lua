@@ -50,7 +50,7 @@ return packer.startup(function(use)
 	use 'RRethy/vim-illuminate'					-- Highlight text under the cursor
 	use 'romgrk/barbar.nvim'					-- Show tabs of the open file
 	use 'simrat39/symbols-outline.nvim'			-- List of symbols (e.g. variable name in a file)
-	use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session
+	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
 	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
 	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
 	use 'BlakeJC94/alpha-nvim-fortune'
