@@ -58,7 +58,6 @@ return packer.startup(function(use)
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
-	use 'ThePrimeagen/harpoon'
 
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
