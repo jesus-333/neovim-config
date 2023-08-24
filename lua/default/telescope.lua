@@ -83,19 +83,6 @@ telescope.setup {
 	
 	-- Config of telescope extensions
 	extensions = {
-		media_files = {
-			-- filetypes whitelist
-			-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-			filetypes = {"png", "webp", "jpg", "jpeg"},
-			find_cmd = "fd" -- find command (defaults to `fd`)
-			--[[ find_cmd = "rg" -- find command (defaults to `fd`) ]]
-		},
-		file_browser = {
-			theme = "ivy",
-			hijack_netrw = false,
-			depth = 5,
-			grouped = true,
-		},
 		
 	},
 }
@@ -103,10 +90,9 @@ telescope.setup {
 -- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 -- Load extensions
 
-telescope.load_extension('media_files')
-telescope.load_extension('file_browser')
+--[[ telescope.load_extension('media_files') ]]
+--[[ telescope.load_extension('file_browser') ]]
 telescope.load_extension('lazygit')
 
 telescope.load_extension('projects')
---[[ require'telescope'.extensions.projects.projects{} ]]
 -- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

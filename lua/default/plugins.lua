@@ -91,8 +91,8 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"					-- Telescope main repository
-	use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files
-	use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files
+	--[[ use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files ]]
+	--[[ use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files ]]
 
 	-- Treesitter
 	use	"nvim-treesitter/nvim-treesitter" 				-- Treesitter main repository

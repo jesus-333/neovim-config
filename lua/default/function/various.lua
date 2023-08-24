@@ -22,3 +22,9 @@ function _G.concat_string_array(string_array)
 	return concat_string
 
 end
+
+function _G.check_parser()
+	-- Sometimes when packets are update (or neovim) a parser is installed that go into conflict with treesitter
+	-- This function return the list of all parsers. 
+	vim.cmd("echo nvim_get_runtime_file('parser', v:true)")
+end
