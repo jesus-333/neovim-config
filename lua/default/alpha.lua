@@ -1,10 +1,12 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
+	print("Problemi with alpha")
 	return
 end
 
 local status_ok, alpha_fortune = pcall(require, "alpha.fortune")
 if not status_ok then
+	print("Problemi with alpha fortune fortune")
 	return
 end
 
@@ -49,3 +51,5 @@ dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)
+
+vim.cmd('Alpha')
