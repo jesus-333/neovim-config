@@ -12,7 +12,7 @@ The list of features include:
 - The classic cool stuff (treesitter, telescope, nvim-tree)
 - Alpha greeter for a cool starting screen
 - [Lazygit integration](lazygit)
-- [Shell integration](toggleterm)
+<!-- - [Shell integration](toggleterm) -->
 - [Surround](surround) plugin (with custom keybindings)
 - [Project integration]()
 
@@ -31,6 +31,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 ```
+
 [telescope-file-browser]:https://github.com/nvim-telescope/telescope-file-browser.nvim
 [comments_plugin]:https://github.com/numToStr/Comment.nvim
 [mason_LSP]:https://github.com/williamboman/mason-lspconfig.nvim
