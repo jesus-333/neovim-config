@@ -1,7 +1,7 @@
 -- Server to config
 local servers = {
-	--[[ "sumneko_lua", ]]
 	"pyright",
+	--[[ "pylyzer", ]]
 	"clangd",
 	"tsserver",
 	"html",
