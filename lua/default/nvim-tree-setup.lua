@@ -18,14 +18,13 @@ end
 nvim_tree.setup {
     disable_netrw = true, -- Disable defualt file explore
     hijack_netrw = true,
-    open_on_setup = false,
 
 	-- File that nvim_tree ignore
-    ignore_ft_on_setup = {
-        "startify",
-        "dashboard",
-        "alpha",
-    },
+    --[[ ignore_ft_on_setup = { ]]
+    --[[     "startify", ]]
+    --[[     "dashboard", ]]
+    --[[     "alpha", ]]
+    --[[ }, ]]
     open_on_tab = false,
     hijack_cursor = false,
     update_cwd = true,
@@ -61,18 +60,8 @@ nvim_tree.setup {
     view = {
         width = 30,
         --[[ height = 30, ]] -- OLD
-        hide_root_folder = false,
         side = "left",
         --[[ auto_resize = true, ]] -- OLD
-        mappings = {
-            custom_only = false,
-            -- Costum keybinding
-			--[[ list = { ]]
-   --[[          { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" }, 	-- o work as <CR> ]]
-   --[[          { key = "h", cb = tree_cb "close_node" }, 				-- Collapse current folder ]]
-   --[[          { key = "v", cb = tree_cb "vsplit" },					-- Press v open file in vertical split ]]
-   --[[          }, ]]
-        },
         number = false,
         relativenumber = false,
     },
