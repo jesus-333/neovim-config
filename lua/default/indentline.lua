@@ -3,6 +3,9 @@ if not status_ok then
 	return
 end
 
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+-- Different color for each line. You 
+
 local highlight = {
     "RainbowRed",
     "RainbowYellow",
@@ -25,5 +28,17 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
     vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
     vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 end)
+--
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
 
-indent_blankline.setup{ indent = { highlight = highlight } }
+
+--[[ indent_blankline.setup{ indent = { highlight = highlight } } ]]
+indent_blankline.setup{
+	scope = {
+		show_start = false,
+		show_end = false,
+	},
+	indent = {
+		highlight = highlight -- Different color for each line
+	}
+}
