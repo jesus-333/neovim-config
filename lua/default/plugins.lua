@@ -59,6 +59,11 @@ return packer.startup(function(use)
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
 
+	use 'MunifTanjim/nui.nvim'					-- UI Component library for Neovim
+	use 'stevearc/dressing.nvim'				-- Improve nvim UI
+	use 'rcarriga/nvim-notify'					-- Notification plugins 
+	use 'folke/noice.nvim'						-- Replace ui for message cmdline and popmenu
+
 	-- Statusline plugin
 	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
 	use "SmiteshP/nvim-navic"		-- A simple statusline/winbar component that uses LSP to show your current code context (e.g. if you are inside a function the name of the function)
