@@ -32,6 +32,11 @@ sudo apt-get update
 sudo apt-get install neovim
 ```
 
+## High CPU Consumption
+Sometimes the process `nvim --embed` remains open after nvim was closed. To solve it run the command  `sudo killall nvim`
+For more info [link](https://github.com/neovim/neovim/issues/1808) and [link](https://github.com/neoclide/coc.nvim/issues/1144)
+
+
 [telescope-file-browser]:https://github.com/nvim-telescope/telescope-file-browser.nvim
 [comments_plugin]:https://github.com/numToStr/Comment.nvim
 [mason_LSP]:https://github.com/williamboman/mason-lspconfig.nvim
