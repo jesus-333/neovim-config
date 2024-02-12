@@ -28,3 +28,33 @@ function _G.check_parser()
 	-- This function return the list of all parsers. 
 	vim.cmd("echo nvim_get_runtime_file('parser', v:true)")
 end
+
+function _G.flip_bool()
+	-- Flip a bool variable
+	local filename = vim.api.nvim_buf_get_name(0)
+
+	local word = get_highlighted_word()
+	local flip_word = "aaa"
+
+	if string.match(filename, ".py") then
+		if word == "False" then
+			flip_word = "True"
+		elseif word == "True" then
+			flip_word = "False"
+		end
+	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") then
+		if word == "false" then
+			flip_word = "true"
+		elseif word == "true" then
+			flip_word = "false"
+		end
+	else
+		print("Language not supported")
+	end
+
+	if flip_word ~= "aaa" then
+		vim.cmd("normal! diwi" ..  flip_word)
+	end
+end
+
+function _G.get_highlighted_word() return vim.fn.expand('<cword>') end

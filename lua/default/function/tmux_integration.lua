@@ -18,7 +18,6 @@ function _G.send_visual_selection_ipython(n_panes)
 	send_yanked_text_ipython(n_panes)
 end
 
-
 vim.api.nvim_create_user_command("SendYankedTextIpython", function()
 	vim.cmd("y")
 	send_yanked_text_ipython(1)

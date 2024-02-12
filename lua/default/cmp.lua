@@ -112,7 +112,7 @@ cmp.setup {
   },
   
   -- How suggestion is "printed"
-  -- kind is the type/symbolo, abbr is the suggestion, menu is the stuff between []
+  -- kind is the type/symbol, abbr is the suggestion, menu is the stuff between []
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
