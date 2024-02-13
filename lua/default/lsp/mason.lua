@@ -1,7 +1,8 @@
 -- Server to config
 local servers = {
-	"pyright",
+	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
+	"pylsp",
 	"clangd",
 	"tsserver",
 	"html",

@@ -29,13 +29,16 @@ function _G.check_parser()
 	vim.cmd("echo nvim_get_runtime_file('parser', v:true)")
 end
 
+-- Flip a bool variable
 function _G.flip_bool()
-	-- Flip a bool variable
+	-- Get the name of the file
 	local filename = vim.api.nvim_buf_get_name(0)
-
+	
+	-- Get the word highlighted by the cursor
 	local word = get_highlighted_word()
 	local flip_word = "aaa"
-
+	
+	-- Check if the word is a bool value and flip it
 	if string.match(filename, ".py") then
 		if word == "False" then
 			flip_word = "True"
@@ -51,7 +54,8 @@ function _G.flip_bool()
 	else
 		print("Language not supported")
 	end
-
+	
+	-- Write the flip value instead of the original bool
 	if flip_word ~= "aaa" then
 		vim.cmd("normal! diwi" ..  flip_word)
 	end
