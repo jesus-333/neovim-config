@@ -46,3 +46,6 @@ keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code
 keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
 keymap("n", "<F10>", ":ToggleTerm<CR>ipython<CR>", opts) -- Open terminal and start ipython 
 keymap("n", "<F9>", ":ToggleTerm<CR><CR><C-C>exit<CR>", opts) -- open terminal and close ipython
+keymap("n", "<leader>rr", ":lua flip_bool()<CR>", opts) -- Change true in false and viceversa
+
+

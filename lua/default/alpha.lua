@@ -52,4 +52,4 @@ dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)
 
-vim.cmd('Alpha')
+--[[ vim.cmd('Alpha') ]]

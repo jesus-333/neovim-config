@@ -1,7 +1,8 @@
 -- Server to config
 local servers = {
-	"pyright",
+	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
+	"pylsp",
 	"clangd",
 	"tsserver",
 	"html",
@@ -13,7 +14,7 @@ local servers = {
 
 local settings = {
 	ui = {
-		border = "none",
+		border = "rounded",
 		icons = {
 			package_installed = "◍",
 			package_pending = "◍",
