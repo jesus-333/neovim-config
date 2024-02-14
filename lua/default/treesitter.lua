@@ -33,14 +33,24 @@ configs.setup {
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = nil, -- Do not enable for files with more than n lines, int
 	},
+	
+	-- Create comments based on context
+	-- Settings deprecated. More info at https://github.com/JoosepAlviste/nvim-ts-context-commentstring/issues/82
+	--[[ context_commentstring = { ]]
+	--[[ 	enable = true, ]]
+	--[[ 	enable_autocmd = false, ]]
+	--[[ 	config = { ]]
+ 	--[[      		python = '# %s' ]]
+ 	--[[    	} ]]
+ 	--[[  	}, ]]
+}
 
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
-		config = {
-      		python = '# %s'
-    	}
-  	},
+require('ts_context_commentstring').setup {
+	enable = True,
+	enable_autocmd = false,
+	languages = {
+		python = '# %s',
+	},
 }
 
 require'treesitter-context'.setup{
