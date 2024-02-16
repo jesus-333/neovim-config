@@ -42,10 +42,7 @@ keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
 
 -- Execute custom function
-keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code
+--[[ keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code ]]
 keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
-keymap("n", "<F10>", ":ToggleTerm<CR>ipython<CR>", opts) -- Open terminal and start ipython 
-keymap("n", "<F9>", ":ToggleTerm<CR><CR><C-C>exit<CR>", opts) -- open terminal and close ipython
-keymap("n", "<leader>rr", ":lua flip_bool()<CR>", opts) -- Change true in false and viceversa
-
-
+keymap("n", "<leader>sb", ":lua switch_bool()<CR>", opts) -- Change true in false and viceversa
+keymap("n", "<leader>sc", ":lua switch_case()<CR>", opts) -- Change from CamelCase to snake_case and viceversa

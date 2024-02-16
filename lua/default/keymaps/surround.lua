@@ -1,5 +1,4 @@
 -- Keymaps relate to surround stuff
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -15,8 +14,8 @@ vim.g.maplocalleader = " "
 -- Surround Add/remove (nvim-surround)
 vim.keymap.set("n", "((", 	"ysiw)", {remap = true, silent = true})   	-- surround word under the cursor with round brackets 	
 vim.keymap.set("n", "))", 	"ds)", 	 {remap = true, silent = true})   	-- remove round brackets around a word (not work perfectly)	
-vim.keymap.set("n", "{{", 	"ysiw}", {remap = true, silent = true})   	-- surround word under the cursor with square brackets	
-vim.keymap.set("n", "}}", 	"ds}", 	 {remap = true, silent = true})   	-- remove square brackets around a word (not work perfectly 	
+--[[ vim.keymap.set("n", "{{", 	"ysiw}", {remap = true, silent = true})   	-- surround word under the cursor with square brackets	 ]]
+--[[ vim.keymap.set("n", "}}", 	"ds}", 	 {remap = true, silent = true})   	-- remove square brackets around a word (not work perfectly 	 ]]
 vim.keymap.set("n", "\"\"", "ysiw\"",{remap = true, silent = true})		-- surround word under the cursor with double quotaion mark   	
 vim.keymap.set("n", "''", 	"ysiw'", {remap = true, silent = true})   	-- surround word under the cursor with single quotaion mark 	
 vim.keymap.set("n", "``", 	"ysiw`", {remap = true, silent = true})   	-- surround word under the cursor with backtick	
