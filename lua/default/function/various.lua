@@ -33,14 +33,14 @@ function _G.switch_bool()
 		elseif word == "True" then
 			flip_word = "False"
 		end
-	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") then
+	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") or string.match(filename, ".lua") then
 		if word == "false" then
 			flip_word = "true"
 		elseif word == "true" then
 			flip_word = "false"
 		end
 	else
-		print("Language not supported")
+		vim.print("Language not supported")
 	end
 	
 	-- Write the flip value instead of the original bool
