@@ -29,10 +29,19 @@ function _G.read_block_spyder()
 	return block_text
 end
 
-
 function _G.get_text_visual_selection()
 	local line_start = vim.fn.getpos("'<")[2]
 	local line_end = vim.fn.getpos("'>")[2]
 
 	return concat_string_array(vim.fn.getline(line_start, line_end))
+end
+
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+-- Get/Set text under the cursor
+
+function _G.get_highlighted_word() return vim.fn.expand('<cword>') end
+
+function _G.set_text_under_cursor(text)
+	vim.api.nvim_put(text, "", true, true)
+	--[[ vim.api.nvim_buf_set_lines(0, 0, 0, false, text) ]]
 end

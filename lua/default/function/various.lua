@@ -1,15 +1,3 @@
-vim.api.nvim_create_user_command("ReloadConfig", function()
-  for name,_ in pairs(package.loaded) do
-    if name:match('^default') and not name:match('nvim-tree') then
-      package.loaded[name] = nil
-    end
-  end
-
-  dofile(vim.env.MYVIMRC)
-  vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
-end, {})
-
-
 function _G.concat_string_array(string_array)
 	local concat_string = ""
 	for i in pairs(string_array) do
@@ -30,7 +18,7 @@ function _G.check_parser()
 end
 
 -- Flip a bool variable
-function _G.flip_bool()
+function _G.switch_bool()
 	-- Get the name of the file
 	local filename = vim.api.nvim_buf_get_name(0)
 	
@@ -61,4 +49,22 @@ function _G.flip_bool()
 	end
 end
 
-function _G.get_highlighted_word() return vim.fn.expand('<cword>') end
+function _G.switch_case()
+	-- Get word
+	local word = get_highlighted_word()
+	local other_case_word = "aaa"
+
+	if word:find('[a-z][A-Z]') then -- Detect camelCase
+		-- Convert camelCase to snake_case
+		other_case_word = word:gsub('([a-z])([A-Z])', '%1_%2'):lower()
+	elseif word:find('_[a-z]') then -- Detect snake_case
+		-- Convert snake_case to camelCase
+		other_case_word = word:gsub('(_)([a-z])', function(_, l) return l:upper() end)
+	else
+		print("Not a snake_case or camelCase word")
+	end
+
+	if other_case_word ~= "aaa" then
+		vim.cmd("normal! diwi" .. other_case_word)
+	end
+end
