@@ -1,14 +1,21 @@
-function _G.basic_imports()
+function _G.snippet_python_file_template()
 	local basic_imports_string = {}
 
+	table.insert(basic_imports_string, "\"\"\"")
+	table.insert(basic_imports_string, "@author : Alberto (Jesus) Zancanaro")
+	table.insert(basic_imports_string, "\"\"\"")
 	table.insert(basic_imports_string, "import numpy as np")
 	table.insert(basic_imports_string, "import matplotlib.pyplot as plt")
-	table.insert(basic_imports_string, "import torch")
+
+	return basic_imports_string
 end
 
 function _G.snippet_torch_class(class_name)
 	local class_torch_string = {}
 
+	table.insert(class_torch_string, "import torch")
+	table.insert(class_torch_string, "from torch import nn")
+	table.insert(class_torch_string, "")
 	table.insert(class_torch_string, "class " .. class_name .. "(nn.Module):")
 	table.insert(class_torch_string, "")
 	table.insert(class_torch_string, "\tdef __init__(self, config : dict):")
@@ -17,7 +24,7 @@ function _G.snippet_torch_class(class_name)
 	table.insert(class_torch_string, "\tdef forward(self, x):")
 	table.insert(class_torch_string, "\t\treturn x")
 	
-	set_text_under_cursor(class_torch_string)
+	return class_torch_string
 end
 
 function _G.snippet_plot_config(width, height)
@@ -31,8 +38,8 @@ function _G.snippet_plot_config(width, height)
 	table.insert(plot_config_string, "\tfontisze = 15,")
 	table.insert(plot_config_string, "\tsave_fig = False,")
 	table.insert(plot_config_string, ")")
-
-	set_text_under_cursor(plot_config_string)
+	
+	return plot_config_string
 end
 
 function _G.snippet_plot_figure(n_rows, n_cols)
@@ -44,6 +51,6 @@ function _G.snippet_plot_figure(n_rows, n_cols)
 	table.insert(figure_string, "fig, ax = plt.subplots(" .. n_rows .. ", " .. n_cols .. ", figsize = plot_config['figsize'])")
 	table.insert(figure_string, "fig.tight_layout()")
 	table.insert(figure_string, "fig.show()")
-
-	set_text_under_cursor(figure_string)
+	
+	return figure_string
 end
