@@ -1,15 +1,3 @@
-vim.api.nvim_create_user_command("ReloadConfig", function()
-  for name,_ in pairs(package.loaded) do
-    if name:match('^default') and not name:match('nvim-tree') then
-      package.loaded[name] = nil
-    end
-  end
-
-  dofile(vim.env.MYVIMRC)
-  vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
-end, {})
-
-
 function _G.concat_string_array(string_array)
 	local concat_string = ""
 	for i in pairs(string_array) do
@@ -79,7 +67,4 @@ function _G.switch_case()
 	if other_case_word ~= "aaa" then
 		vim.cmd("normal! diwi" .. other_case_word)
 	end
-
 end
-
-function _G.get_highlighted_word() return vim.fn.expand('<cword>') end
