@@ -3,11 +3,11 @@
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 -- Snippet
 
-vim.api.nvim_create_user_command("SnippetPythonTemplate", function(args)
+vim.api.nvim_create_user_command("SnippetPythonTemplate", function()
 	local tmp_string
 	tmp_string = snippet_python_file_template()
 	set_text_under_cursor(tmp_string)
-end, {nargs = 1, desc = "Snippet with basic import and headline for python script"})
+end, {nargs = 0, desc = "Snippet with basic import and headline for python script"})
 
 vim.api.nvim_create_user_command("SnippetTorchClass", function(args)
 	local tmp_string

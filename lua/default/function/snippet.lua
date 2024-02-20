@@ -3,6 +3,7 @@ function _G.snippet_python_file_template()
 
 	table.insert(basic_imports_string, "\"\"\"")
 	table.insert(basic_imports_string, "@author : Alberto (Jesus) Zancanaro")
+	table.insert(basic_imports_string, "@organization : University of Padua")
 	table.insert(basic_imports_string, "\"\"\"")
 	table.insert(basic_imports_string, "import numpy as np")
 	table.insert(basic_imports_string, "import matplotlib.pyplot as plt")
@@ -35,9 +36,10 @@ function _G.snippet_plot_config(width, height)
 	
 	table.insert(plot_config_string, "plot_config = dict(")
 	table.insert(plot_config_string, "\tfigsize = (" .. width .. ", " .. height .. "),")
-	table.insert(plot_config_string, "\tfontisze = 15,")
+	table.insert(plot_config_string, "\tfontsize = 15,")
 	table.insert(plot_config_string, "\tsave_fig = False,")
 	table.insert(plot_config_string, ")")
+	table.insert(plot_config_string, "plt.rcParams.update({'font.size': plot_config['fontsize']})")
 	
 	return plot_config_string
 end
