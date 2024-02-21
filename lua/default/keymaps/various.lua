@@ -16,6 +16,9 @@ keymap("n", "<C-b>", "<Esc>:bd<CR>", opts)
 -- Save file
 keymap("n", "<leader>w", ":w!<cr>", opts)
 
+-- Close windows
+keymap("n", "<leader>q", ":q<CR>", opts)
+
 -- Open LazyGit
 keymap("n", "<leader>z", ":LazyGit<CR>", opts)
 
