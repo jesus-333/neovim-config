@@ -22,8 +22,8 @@ keymap("n", "<leader>s2", "<cmd> Telescope lsp_document_symbols symbols=variable
 keymap("n", "<leader>s3", ":SymbolsOutline<cr>", opts) -- Symbols outline plugin. Not telescope but put here because of the keymap
 
 -- With leader + t open the function to search through text
-keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>tg", "<cmd>Telescope grep_string<cr>", opts)
+keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gs", "<cmd>Telescope grep_string<cr>", opts)
 
 -- Various builtin telescope function
 keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts) 	-- List of open buffer (tab)
