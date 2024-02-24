@@ -28,14 +28,14 @@ dashboard.section.header.val = {
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠛⠋⠛⠙⠛⠙⠛⠙⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 }
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
+	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("p", "  Find project", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>"),
 	--[[ dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"), ]]
-	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
+	dashboard.button("t", "󰟵  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-	dashboard.button("h", "  Check Health", ":checkhealth <CR>"),
-	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+	dashboard.button("h", "󰋠  Check Health", ":checkhealth <CR>"),
+	dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 }
 
 local function footer()
