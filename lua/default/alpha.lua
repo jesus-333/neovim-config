@@ -33,7 +33,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("p", "  Find project", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>"),
 	--[[ dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"), ]]
 	dashboard.button("t", "󰟵  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("cn", "  Configuration (nvim)", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("ct", "  Configuration (tmux)", ":e ~/.config/nvim/other/.tmux.conf <CR>"),
 	dashboard.button("h", "󰋠  Check Health", ":checkhealth <CR>"),
 	dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 }
