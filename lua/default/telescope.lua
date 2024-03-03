@@ -80,6 +80,23 @@ telescope.setup {
 			},
 		},
 	},
+
+	pickers = {
+		find_files = {
+			find_command = {'rg', '--files', '--hidden', '-g', '!.git'},
+		},
+		git_status = {
+			git_icons = {
+				added = " ",
+				changed = " ",
+				copied = " ",
+				deleted = " ",
+				renamed = "➡",
+				unmerged = " ",
+				untracked = " ",
+			},
+		},
+	},
 	
 	-- Config of telescope extensions
 	extensions = {

@@ -4,7 +4,7 @@ require "default.options"
 -- Keymaps file
 require "default.keymaps"
 
--- Plugins file
+-- File with the list of all the plugins used
 require "default.plugins"
 
 -- Colorscheme file
@@ -14,7 +14,7 @@ require "default.colorscheme"
 require "default.cmp"
 require "default.lsp"
 
--- Plugin settings
+-- Plugins settings (each plugin has its own settings file)
 require "default.telescope"			-- Telescope (Search between text/File)
 require "default.treesitter"		-- Treesitter (parser)
 require "default.autopairs"			-- Brackets automatic closure
@@ -32,4 +32,4 @@ require "default.project"			-- Setup of the project plugin
 require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
 require "default.dressing"			-- Ui Extension
 require "default.noice"				-- Replace cmd 
-require "default.function"			-- Custom function I wrote
+require "default.function"			-- Custom function I wrote (not really a plugin)

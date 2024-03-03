@@ -1,3 +1,5 @@
+-- All of this is test stuff
+
 function _G.execute_python()
 	local filename = vim.api.nvim_buf_get_name(0)
 	if string.match(filename, ".py") then

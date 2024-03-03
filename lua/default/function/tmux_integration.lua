@@ -1,3 +1,5 @@
+-- All of this is test stuff
+
 function _G.send_text_tmux_panes(n_panes, command)
 	vim.cmd("!tmux send-keys -t " .. n_panes .. " " .. command .. " Enter")
 end
