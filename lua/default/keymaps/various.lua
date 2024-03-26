@@ -9,6 +9,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- Search inside the file
 keymap("n", "ff", "yiw/<C-r>\"<CR>:noh<CR>", opts) -- Find the next occurence of the word under the cursor
+--[[ keymap("n", "ff", "#<ESC>N", opts) -- Find the next occurence of the word under the cursor ]] -- TODO DEBUG
 
 -- Close the current buffer
 keymap("n", "<C-b>", "<Esc>:bd<CR>", opts)
@@ -31,14 +32,14 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Trouble plugin
 vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
 
--- Toggle Terminal
+-- Toggle Terminal (Plugin removed)
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
 --[[ keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts) ]]
 --[[ keymap("v", "<C-e>", ":ToggleTermSendVisualSelection<cr>", opts) ]]
 
--- Send text to tmux
-keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts)
-keymap("v", "<C-e>", ":SendYankedTextIpython<cr>", opts)
+-- Send text to tmux (TODO)
+--[[ keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts) ]]
+--[[ keymap("v", "<C-e>", ":SendYankedTextIpython<cr>", opts) ]]
 
 -- Replace Text
 keymap("n", "<leader>r1", ":%s/", opts)
