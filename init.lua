@@ -1,7 +1,7 @@
 -- Neovim option file
 require "default.options"
 
--- Keymaps file
+-- Keymaps config (multiple files)
 require "default.keymaps"
 
 -- File with the list of all the plugins used
@@ -10,7 +10,7 @@ require "default.plugins"
 -- Colorscheme file
 require "default.colorscheme"
 
--- Autocompletion and LSP
+-- Autocompletion and LSP (multiple files)
 require "default.cmp"
 require "default.lsp"
 
@@ -32,4 +32,5 @@ require "default.project"			-- Setup of the project plugin
 require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the files)
 require "default.dressing"			-- Ui Extension
 require "default.noice"				-- Replace cmd 
+require "default.leap"				-- Navigation plugin
 require "default.function"			-- Custom function I wrote (not really a plugin)
