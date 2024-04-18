@@ -44,23 +44,25 @@ return packer.startup(function(use)
 	use "wbthomason/packer.nvim"				-- Have packer manage itself
 	use "nvim-lua/popup.nvim"					-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim"					-- Useful lua functions used in lots of plugins
-	use "windwp/nvim-autopairs"					-- Autopairs, integrates with both cmp and treesitter
-	use "numToStr/Comment.nvim"					-- Easily comment stuff
 	use 'kyazdani42/nvim-tree.lua'				-- nvim-tree (file explorer)
+	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
+	use "ahmedkhalf/project.nvim"				-- Project plugins
+	use 'simrat39/rust-tools.nvim'
+	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
+
+	-- Navigation/editing
 	use 'RRethy/vim-illuminate'					-- Highlight text under the cursor
+	use "numToStr/Comment.nvim"					-- Easily comment stuff
+	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
+	use "ggandor/leap.nvim"						-- Navigation plugin
+	use "windwp/nvim-autopairs"					-- Autopairs, integrates with both cmp and treesitter
+	
+	-- UI/Graphics/Notifications plugins
 	use 'romgrk/barbar.nvim'					-- Show tabs of the open file
-	use 'simrat39/symbols-outline.nvim'			-- List of symbols (e.g. variable name in a file)
+	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines)(i.e. show vertical line to indicate different indentation levels).
 	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
 	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
 	use 'BlakeJC94/alpha-nvim-fortune'			-- Add citations to alpha greeter
-	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines).
-	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
-	use "ahmedkhalf/project.nvim"				-- Project plugins
-	use "ggandor/leap.nvim"						-- Navigation plugin
-	use 'simrat39/rust-tools.nvim'
-	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
-	
-	-- UI/Notifications plugins
 	use 'MunifTanjim/nui.nvim'					-- UI Component library for Neovim
 	use 'stevearc/dressing.nvim'				-- Improve nvim UI
 	use 'rcarriga/nvim-notify'					-- Notification plugins 
