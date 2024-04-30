@@ -6,49 +6,60 @@ local M = {}
 
 -- TODO: backfill this to template
 M.setup = function()
-  -- Set icons for error/warnings etc
-  local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
-  }
+	local border = {
+		{ '┌', 'FloatBorder' },
+		{ '─', 'FloatBorder' },
+		{ '┐', 'FloatBorder' },
+		{ '│', 'FloatBorder' },
+		{ '┘', 'FloatBorder' },
+		{ '─', 'FloatBorder' },
+		{ '└', 'FloatBorder' },
+		{ '│', 'FloatBorder' },
+	}
 
-  for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-  end
+	-- Set icons for error/warnings etc
+	local signs = {
+		{ name = "DiagnosticSignError", text = "" },
+		{ name = "DiagnosticSignWarn", text = "" },
+		{ name = "DiagnosticSignHint", text = "" },
+		{ name = "DiagnosticSignInfo", text = "" },
+	}
 
-  local config = {
-    -- disable virtual text
-    virtual_text = false,
-    -- show signs
-    signs = {
-      active = signs,
-    },
-    update_in_insert = true,
-    underline = true,
-    severity_sort = true,
+	for _, sign in ipairs(signs) do
+		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+	end
 
-	-- Setup for floating winwdows (error description, funciton documentation etc)
-    float = {
-      focusable = true,
-      style = "minimal",
-      border = "rounded",
-      source = "always",
-      header = "",
-      prefix = "",
-    },
-  }
+	local config = {
+		-- disable virtual text
+		virtual_text = false,
+		-- show signs
+		signs = {
+		  active = signs,
+		},
+		update_in_insert = true,
+		underline = true,
+		severity_sort = true,
 
-  vim.diagnostic.config(config)
+		-- Setup for floating winwdows (error description, funciton documentation etc)
+		float = {
+		  focusable = true,
+		  style = "minimal",
+		  border = border,
+		  source = "always",
+		  header = "",
+		  prefix = "",
+		},
+	}
 
-  -- Set round border on hover and signatureHelp 
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-  })
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
-  })
+	vim.diagnostic.config(config)
+
+	-- Set round border on hover and signatureHelp 
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		border = border,
+	})
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+		border = border,
+	})
 end
 
 -- Personal keybinding for LSP
