@@ -82,7 +82,7 @@ return packer.startup(function(use)
 	use "hrsh7th/cmp-nvim-lua"		-- nvim-cmp source for neovim Lua API.
 
 	-- snippets
-	use "L3MON4D3/LuaSnip" 					--snippet engine
+	use "L3MON4D3/LuaSnip" 					-- snippet engine
 	use "saadparwaiz1/cmp_luasnip" 			-- snippet completions
 	-- use "rafamadriz/friendly-snippets" 	-- a bunch of snippets to use
 
@@ -93,6 +93,8 @@ return packer.startup(function(use)
 		"neovim/nvim-lspconfig" 				-- Enalbe LSP
 	}
 	use "folke/trouble.nvim"					-- List of all the LSP notifications in the files
+	use "zbirenbaum/copilot.lua"				-- Github Copilot (extension written in lua)
+	--[[ use "github/copilot.vim"					-- Github Copilot (original version)]]
 
 	-- Colorscheme
 	use 'folke/tokyonight.nvim'

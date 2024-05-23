@@ -32,6 +32,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Trouble plugin
 vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
 
+-- Copilot
+keymap("n", "<leader>cp", ":Copilot panel<cr>", opts)
+keymap("n", "<leader>cs", ":Copilot suggestion<cr>", opts)
+
 -- Toggle Terminal (Plugin removed)
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
 --[[ keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts) ]]
