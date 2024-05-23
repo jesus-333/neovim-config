@@ -59,6 +59,8 @@ cmp.setup {
 		-- Move up and down between suggestion
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<Tab>"] = cmp.mapping.select_next_item(),
+		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 
 		-- Scroll through suggestion window (i.e. the window with the suggestion description)
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
@@ -80,35 +82,6 @@ cmp.setup {
 		-- CR stands for enter AGPL
 		["<CR>"] = cmp.mapping.confirm { select = true },
 
-		-- Super tab stuff
-		["<Tab>"] = cmp.mapping(function(fallback)
-		if cmp.visible() then
-			cmp.select_next_item()
-		elseif luasnip.expandable() then
-			luasnip.expand()
-		elseif luasnip.expand_or_jumpable() then
-			luasnip.expand_or_jump()
-		elseif check_backspace() then
-			fallback()
-		else
-			fallback()
-		end
-		end, {
-			"i",
-			"s",
-			}),
-			["<S-Tab>"] = cmp.mapping(function(fallback)
-		if cmp.visible() then
-			cmp.select_prev_item()
-		elseif luasnip.jumpable(-1) then
-			luasnip.jump(-1)
-		else
-			fallback()
-		end
-		end, {
-			"i",
-			"s",
-		}),
 	},
   
 	-- How suggestion is "printed"
@@ -122,11 +95,11 @@ cmp.setup {
 
 			-- Show the origin of the completion in the floating window
 			vim_item.menu = ({
-			nvim_lsp = "[LSP]",
-			nvim_lua = "[NVIM_LUA]",
-			luasnip = "[Snippet]",
-			buffer = "[Buffer]",
-			path = "[Path]",
+				nvim_lsp = "[LSP]",
+				nvim_lua = "[NVIM_LUA]",
+				luasnip = "[Snippet]",
+				buffer = "[Buffer]",
+				path = "[Path]",
 			})[entry.source.name]
 			return vim_item
 		end,
