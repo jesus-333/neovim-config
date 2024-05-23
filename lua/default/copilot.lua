@@ -25,7 +25,8 @@ copilot.setup{
 		auto_trigger = false,
 		debounce = 75,
 		keymap = {
-			accept = "<C-l>",
+			--[[ accept = "<C-l>", ]]
+			accept = "<Tab>",
 			accept_word = false,
 			accept_line = false,
 			next = "<M-]>",
