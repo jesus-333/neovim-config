@@ -4,9 +4,9 @@ local servers = {
 	--[[ "pylyzer", ]]
 	"pylsp",
 	"clangd",
-	"tsserver",
-	"html",
-	"cssls",
+	--[[ "tsserver", ]]
+	--[[ "html", ]]
+	--[[ "cssls", ]]
 	"jsonls",
 	"rust_analyzer",
 	"lua_ls",

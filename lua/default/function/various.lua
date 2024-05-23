@@ -29,9 +29,9 @@ function _G.switch_bool()
 	-- Check if the word is a bool value and flip it
 	if string.match(filename, ".py") then
 		if word == "False" then
-			flip_word = "True"
+			flip_word = " True"
 		elseif word == "True" then
-			flip_word = "False"
+			flip_word = " False"
 		end
 	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") or string.match(filename, ".lua") then
 		if word == "false" then
@@ -45,7 +45,7 @@ function _G.switch_bool()
 	
 	-- Write the flip value instead of the original bool
 	if flip_word ~= "aaa" then
-		vim.cmd("normal! diwi" ..  flip_word)
+		vim.cmd("normal! caw" ..  flip_word)
 	end
 end
 
@@ -67,4 +67,17 @@ function _G.switch_case()
 	if other_case_word ~= "aaa" then
 		vim.cmd("normal! diwi" .. other_case_word)
 	end
+end
+
+function _G.table_to_string(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
 end

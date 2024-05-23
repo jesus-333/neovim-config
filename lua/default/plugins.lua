@@ -48,6 +48,7 @@ return packer.startup(function(use)
 	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
+	use 'wakatime/vim-wakatime' 				-- Stats about coding
 	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
 
 	-- Navigation/editing
@@ -111,6 +112,7 @@ return packer.startup(function(use)
 	-- Git
 	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc
 	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit
+	use 'akinsho/git-conflict.nvim' -- Plugin to resolve merge conflicts
 
 	-- Devicons
 	use 'nvim-tree/nvim-web-devicons'
