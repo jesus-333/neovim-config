@@ -13,6 +13,7 @@ require "default.colorscheme"
 -- Autocompletion and LSP (multiple files)
 require "default.cmp"
 require "default.lsp"
+require "default.copilot"
 
 -- Plugins settings (each plugin has its own settings file)
 require "default.telescope"			-- Telescope (Search between text/File)
