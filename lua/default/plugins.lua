@@ -93,6 +93,7 @@ return packer.startup(function(use)
 		"neovim/nvim-lspconfig" 				-- Enalbe LSP
 	}
 	use "folke/trouble.nvim"					-- List of all the LSP notifications in the files
+	use "nvimtools/none-ls.nvim"				-- Comunity version of null-ls
 	use "zbirenbaum/copilot.lua"				-- Github Copilot (extension written in lua)
 	--[[ use "github/copilot.vim"					-- Github Copilot (original version)]]
 

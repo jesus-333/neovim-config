@@ -47,6 +47,10 @@ end, { desc = "Super Tab" })
 keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
 
+-- Formatting
+vim.keymap.set('n', '<space>lf', '<cmd>lua vim.lsp.buf.format()<CR>')
+vim.keymap.set('v', '<space>lf', '<cmd>lua vim.lsp.buf.format()<CR><ESC>')
+
 -- Execute custom function
 --[[ keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code ]]
 keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
