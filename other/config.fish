@@ -7,7 +7,7 @@ end
 eval /home/jesus-wsl-dell/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-# Stuff for DENO
+# Stuff for DENO (javascript/typescript)
 set -x DENO_INSTALL /home/jesus-wsl-dell/.deno 
 set -x PATH $DENO_INSTALL/bin:$PATH
 
