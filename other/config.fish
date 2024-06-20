@@ -1,13 +1,15 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+and not set -q TMUX
+    exec tmux
 end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/jesus-wsl-dell/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /home/jesus/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-# Stuff for DENO (javascript/typescript)
+# Stuff for DENO
 set -x DENO_INSTALL /home/jesus-wsl-dell/.deno 
 set -x PATH $DENO_INSTALL/bin:$PATH
 
@@ -27,3 +29,7 @@ end
 
 # CARGO for Rust
 set -x PATH $PATH ~/.cargo/bin/
+
+# nvim path (Used if you install nvim from tar file)
+set -x PATH $PATH /opt/nvim-linux64/bin
+
