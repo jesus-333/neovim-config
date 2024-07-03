@@ -35,6 +35,13 @@ vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {norema
 -- Copilot
 keymap("n", "<leader>cp", ":Copilot panel<cr>", opts)
 keymap("n", "<leader>cs", ":Copilot suggestion<cr>", opts)
+vim.keymap.set('i', '<Tab>', function()
+	if require("copilot.suggestion").is_visible() then
+		require("copilot.suggestion").accept()
+	else
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+	end
+end, { desc = "Super Tab" })
 
 -- Toggle Terminal (Plugin removed)
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
