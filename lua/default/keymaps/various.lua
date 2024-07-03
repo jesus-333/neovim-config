@@ -43,6 +43,20 @@ vim.keymap.set('i', '<Tab>', function()
 	end
 end, { desc = "Super Tab" })
 
+-- Replace Text
+keymap("n", "<leader>r1", ":%s/", opts)
+keymap("n", "<leader>r2", ":s/", opts)
+
+-- Formatting
+vim.keymap.set('n', '<space>lf', '<cmd>lua vim.lsp.buf.format()<CR>')
+vim.keymap.set('v', '<space>lf', '<cmd>lua vim.lsp.buf.format()<CR><ESC>')
+
+-- Execute custom function
+--[[ keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code ]]
+keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
+keymap("n", "<leader>sb", ":lua switch_bool()<CR>", opts) -- Change true in false and viceversa
+keymap("n", "<leader>sc", ":lua switch_case()<CR>", opts) -- Change from CamelCase to snake_case and viceversa
+
 -- Toggle Terminal (Plugin removed)
 -- <C-\> Open/Close the terminal. Specified inside the toggleterm plugin file
 --[[ keymap("n", "<C-e>", ":ToggleTermSendCurrentLine<cr>", opts) ]]
@@ -51,13 +65,3 @@ end, { desc = "Super Tab" })
 -- Send text to tmux (TODO)
 --[[ keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts) ]]
 --[[ keymap("v", "<C-e>", ":SendYankedTextIpython<cr>", opts) ]]
-
--- Replace Text
-keymap("n", "<leader>r1", ":%s/", opts)
-keymap("n", "<leader>r2", ":s/", opts)
-
--- Execute custom function
---[[ keymap("n", "<C-x>", ":ExecutePython<CR>", opts) -- Execute python code ]]
-keymap("n", "<F12>", ":ReloadConfig<CR>", opts) -- Reload config
-keymap("n", "<leader>sb", ":lua switch_bool()<CR>", opts) -- Change true in false and viceversa
-keymap("n", "<leader>sc", ":lua switch_case()<CR>", opts) -- Change from CamelCase to snake_case and viceversa

@@ -45,3 +45,6 @@ function _G.set_text_under_cursor(text)
 	vim.api.nvim_put(text, "", true, true)
 	--[[ vim.api.nvim_buf_set_lines(0, 0, 0, false, text) ]]
 end
+
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+

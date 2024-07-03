@@ -60,3 +60,5 @@ vim.api.nvim_create_user_command("ReloadConfig", function()
   dofile(vim.env.MYVIMRC)
   vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end, {})
+
+--[[ vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {}) ]]
