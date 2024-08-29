@@ -34,4 +34,4 @@ require "default.trouble"			-- Trouble plugin (list of lsp notes/error in the fi
 require "default.dressing"			-- Ui Extension
 require "default.noice"				-- Replace cmd 
 require "default.leap"				-- Navigation plugin
-require "default.function"			-- Custom function I wrote (not really a plugin)
+require "default.function"			-- Custom functions I wrote (not really a plugin)

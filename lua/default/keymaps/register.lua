@@ -84,7 +84,7 @@ keymap("n", "<leader>pl", "\"lp", opts)
 keymap("n", "<leader>pm", "\"mp", opts)
 keymap("n", "<leader>pn", "\"np", opts)
 keymap("n", "<leader>po", "\"op", opts)
-keymap("n", "<leader>pp", "\"pp", opts)
+--[[ keymap("n", "<leader>pp", "\"pp", opts) ]]
 keymap("n", "<leader>pq", "\"qp", opts)
 keymap("n", "<leader>pr", "\"rp", opts)
 keymap("n", "<leader>ps", "\"sp", opts)
