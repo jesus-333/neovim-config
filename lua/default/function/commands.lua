@@ -45,6 +45,14 @@ vim.api.nvim_create_user_command("SnippetPlotFigure", function(args)
 
 end, {nargs = '*', desc = "Snippet of code for a figure in matplotlib. Optionallay you can pass n_rows and n_cols"})
 
+vim.api.nvim_create_user_command("SnippetPrint", function(args)
+	local input_argument = args.fargs
+	local tmp_string
+
+	set_text_under_cursor(snippet_print())
+
+end, {nargs = '*', desc = "Create a print function for the specific language"})
+
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 -- Other function
 

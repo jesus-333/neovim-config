@@ -33,7 +33,7 @@ function _G.switch_bool()
 		elseif word == "True" then
 			flip_word = " False"
 		end
-	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") or string.match(filename, ".lua") then
+	elseif string.match(filename, ".cpp") or string.match(filename, ".rs") or string.match(filename, ".lua") or string.match(filename, ".c") then
 		if word == "false" then
 			flip_word = "true"
 		elseif word == "true" then

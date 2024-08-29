@@ -56,3 +56,22 @@ function _G.snippet_plot_figure(n_rows, n_cols)
 	
 	return figure_string
 end
+
+function _G.snippet_print()
+	local print_string = {}
+
+	local filename = vim.api.nvim_buf_get_name(0)
+	
+	vim.print(vim.api.nvim_get_current_line())
+
+	if string.match(filename, ".py") then
+		table.insert(print_string, "print(\"\")")
+	elseif string.match(filename, ".rs") then
+		table.insert(print_string, "println!(\"{}\");")
+	else
+		vim.print("Language not supported")
+	end
+
+	
+	return print_string
+end
