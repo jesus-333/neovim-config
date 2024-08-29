@@ -59,8 +59,8 @@ cmp.setup {
 		-- Move up and down between suggestion
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
-		["<Tab>"] = cmp.mapping.select_next_item(),
-		["<S-Tab>"] = cmp.mapping.select_prev_item(),
+		--[[ ["<Tab>"] = cmp.mapping.select_next_item(), ]]
+		--[[ ["<S-Tab>"] = cmp.mapping.select_prev_item(), ]]
 
 		-- Scroll through suggestion window (i.e. the window with the suggestion description)
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
