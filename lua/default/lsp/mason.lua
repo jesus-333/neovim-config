@@ -2,7 +2,9 @@
 local servers = {
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
-	"pylsp",
+	--[[ "pylsp", ]]
+	"jedi_language_server",
+	--[[ "ruff_lsp", ]]
 	"clangd",
 	--[[ "tsserver", ]]
 	--[[ "html", ]]
