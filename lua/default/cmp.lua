@@ -63,8 +63,8 @@ cmp.setup {
 		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 
 		-- Scroll through suggestion window (i.e. the window with the suggestion description)
-		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 
 		-- Show all completion 
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),

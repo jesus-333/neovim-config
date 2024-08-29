@@ -25,6 +25,7 @@ keymap("n", "<leader>z", ":LazyGit<CR>", opts)
 
 -- Insert a string of dash space char as comment
 vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap = true, silent = true})
+vim.keymap.set("n", "<Leader>pp", ":SnippetPrint<CR>", {remap = true, silent = true})
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
