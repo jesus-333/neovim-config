@@ -1,17 +1,25 @@
 -- Server to config
 local servers = {
+	-- Python LSP
+	"jedi_language_server",
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
 	--[[ "pylsp", ]]
-	"jedi_language_server",
 	--[[ "ruff_lsp", ]]
+	
+	-- Other Languages
 	"clangd",
-	--[[ "tsserver", ]]
-	--[[ "html", ]]
-	--[[ "cssls", ]]
-	"jsonls",
 	"rust_analyzer",
 	"lua_ls",
+	--[[ "tsserver", ]]
+	
+	-- Other stuff
+	"jsonls",
+	"ltex"
+	--[[ "harper_ls", ]]
+	--[[ "grammarly" ]]
+	--[[ "html", ]]
+	--[[ "cssls", ]]
 }
 
 local settings = {
