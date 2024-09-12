@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
 	use 'wakatime/vim-wakatime' 				-- Stats about coding
+	use 'rhysd/vim-grammarous'
 	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
 
 	-- Navigation/editing

@@ -4,12 +4,13 @@ configs.setup {
 	ensure_installed = {
 		"c",
 		"cpp",
-		"lua",
-		"python",
-		"markdown",
-		"markdown_inline",
 		"javascript",
 		"json",
+		"latex",
+		"lua",
+		"markdown",
+		"markdown_inline",
+		"python",
 		"rust"
 	},
 	sync_install = false,
