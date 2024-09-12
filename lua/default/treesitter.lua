@@ -6,7 +6,7 @@ configs.setup {
 		"cpp",
 		"javascript",
 		"json",
-		"latex",
+		--[[ "latex", ]]
 		"lua",
 		"markdown",
 		"markdown_inline",
@@ -47,7 +47,7 @@ configs.setup {
 }
 
 require('ts_context_commentstring').setup {
-	enable = True,
+	enable = true,
 	enable_autocmd = false,
 	languages = {
 		python = '# %s',

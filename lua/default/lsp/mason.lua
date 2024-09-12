@@ -5,7 +5,7 @@ local servers = {
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
 	--[[ "pylsp", ]]
-	--[[ "ruff_lsp", ]]
+	"ruff_lsp",
 	
 	-- Other Languages
 	"clangd",
