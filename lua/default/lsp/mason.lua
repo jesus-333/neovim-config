@@ -2,20 +2,20 @@
 local servers = {
 	-- Python LSP
 	"jedi_language_server",
+	"ruff_lsp",
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
 	--[[ "pylsp", ]]
-	"ruff_lsp",
 	
 	-- Other Languages
 	"clangd",
 	"rust_analyzer",
 	"lua_ls",
-	--[[ "tsserver", ]]
 	
 	-- Other stuff
 	"jsonls",
-	"ltex"
+	"texlab",
+	--[[ "ltex" ]]
 	--[[ "harper_ls", ]]
 	--[[ "grammarly" ]]
 	--[[ "html", ]]
