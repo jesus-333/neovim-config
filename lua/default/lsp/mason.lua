@@ -4,7 +4,7 @@ local servers = {
 	--[[ "pylyzer", ]]
 	--[[ "pylsp", ]]
 	"jedi_language_server",
-	--[[ "ruff_lsp", ]]
+	"ruff_lsp",
 	"clangd",
 	--[[ "tsserver", ]]
 	--[[ "html", ]]
@@ -12,6 +12,7 @@ local servers = {
 	"jsonls",
 	"rust_analyzer",
 	"lua_ls",
+	"texlab",
 }
 
 local settings = {
