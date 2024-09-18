@@ -23,6 +23,7 @@ require "default.lualine"			-- lualine statusbar
 require "default.comments"			-- Comments plugin (add command to comments line(s))
 require "default.gitsign"			-- Gitsign (show diff and other stuff)
 require "default.nvim-tree-setup"	-- nvim-tree (file explorer)
+require "default.oil"				-- oil (file explorer)
 require "default.vim-illuminate"	-- vim-illuminate (text highlight)
 require "default.symbols-outline"	-- List of symbols (e.g. variable name)
 require "default.which-key"			-- Show keybinding
