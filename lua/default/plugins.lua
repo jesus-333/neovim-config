@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim"					-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim"					-- Useful lua functions used in lots of plugins
 	use 'kyazdani42/nvim-tree.lua'				-- nvim-tree (file explorer)
+	use 'stevearc/oil.nvim'						-- nvim-oil (file explorer)
 	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
@@ -56,7 +57,7 @@ return packer.startup(function(use)
 	use 'RRethy/vim-illuminate'					-- Highlight text under the cursor
 	use "numToStr/Comment.nvim"					-- Easily comment stuff
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
-	use "ggandor/leap.nvim"						-- Navigation plugin
+	use "ggandor/leap.nvim"						-- Navigation pluginpl
 	use "windwp/nvim-autopairs"					-- Autopairs, integrates with both cmp and treesitter
 	
 	-- UI/Graphics/Notifications plugins
