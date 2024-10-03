@@ -45,7 +45,8 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim"					-- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim"					-- Useful lua functions used in lots of plugins
 	use 'kyazdani42/nvim-tree.lua'				-- nvim-tree (file explorer)
-	use 'stevearc/oil.nvim'						-- nvim-oil (file explorer)
+	use 'stevearc/oil.nvim'
+
 	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
 	use "ahmedkhalf/project.nvim"				-- Project plugins
 	use 'simrat39/rust-tools.nvim'
@@ -57,7 +58,7 @@ return packer.startup(function(use)
 	use 'RRethy/vim-illuminate'					-- Highlight text under the cursor
 	use "numToStr/Comment.nvim"					-- Easily comment stuff
 	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
-	use "ggandor/leap.nvim"						-- Navigation pluginpl
+	use "ggandor/leap.nvim"						-- Navigation plugin
 	use "windwp/nvim-autopairs"					-- Autopairs, integrates with both cmp and treesitter
 	
 	-- UI/Graphics/Notifications plugins
@@ -110,7 +111,7 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use	"nvim-treesitter/nvim-treesitter" 				-- Treesitter main repository
-	use "p00f/nvim-ts-rainbow" 							-- Plugin for Treesitter for nested parenthesis TODO. Reinstallare fra un po' di tempo perchè per ora da errore
+	--[[ use "p00f/nvim-ts-rainbow" 							-- Plugin for Treesitter for nested parenthesis TODO. Reinstallare fra un po' di tempo perchè per ora da errore ]]
 	use 'JoosepAlviste/nvim-ts-context-commentstring' 	-- Use treesitter queries to create comments based on the context of the file
 	use 'nvim-treesitter/nvim-treesitter-context'		-- Use treesitter to show the current context (e.g. the function you are inside at the moment)
 
@@ -128,3 +129,5 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+
+
