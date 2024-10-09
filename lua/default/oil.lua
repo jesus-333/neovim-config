@@ -70,7 +70,7 @@ require("oil").setup({
 	keymaps = {
 		["g?"] = "actions.show_help",
 		["<CR>"] = "actions.select",
-		["<C-s>"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
+		["<C-v>"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
 		["<C-h>"] = { "actions.select", opts = { horizontal = true }, desc = "Open the entry in a horizontal split" },
 		["<C-t>"] = { "actions.select", opts = { tab = true }, desc = "Open the entry in new tab" },
 		["<C-p>"] = "actions.preview",
@@ -93,11 +93,11 @@ require("oil").setup({
 		show_hidden = false,
 		-- This function defines what is considered a "hidden" file
 		is_hidden_file = function(name, bufnr)
-		return vim.startswith(name, ".")
+			return vim.startswith(name, ".")
 		end,
 		-- This function defines what will never be shown, even when `show_hidden` is set
 		is_always_hidden = function(name, bufnr)
-		return false
+			return false
 		end,
 		-- Sort file names in a more intuitive order for humans. Is less performant,
 		-- so you may want to set to false if you work with large directories.
@@ -132,7 +132,7 @@ require("oil").setup({
 	-- Configuration for the floating window in oil.open_float
 	float = {
 		-- Padding around the floating window
-		padding = 2,
+		padding = 4,
 		max_width = 0,
 		max_height = 0,
 		border = "rounded",
