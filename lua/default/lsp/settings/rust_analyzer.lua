@@ -1,9 +1,9 @@
 return {
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = true;
-      }
-    }
-  }
+	settings = {
+		['rust-analyzer'] = {
+			diagnostics = {
+				enable = true;
+			}
+		}
+	}
 }
