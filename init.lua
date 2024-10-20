@@ -37,3 +37,4 @@ require "default.noice"				-- Replace cmd
 require "default.notify"
 require "default.leap"				-- Navigation plugin
 require "default.function"			-- Custom functions I wrote (not really a plugin)
+--[[ require "default.vim-grammarous"	-- Grammar check ]]

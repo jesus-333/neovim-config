@@ -15,6 +15,7 @@ local servers = {
 	-- Other stuff
 	"jsonls",
 	"texlab",
+	"taplo"
 	--[[ "ltex" ]]
 	--[[ "harper_ls", ]]
 	--[[ "grammarly" ]]
