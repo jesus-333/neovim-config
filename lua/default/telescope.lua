@@ -6,12 +6,19 @@ end
 
 local actions = require "telescope.actions"
 
+local ignore_filetypes_list = {
+    "venv", "__pycache__", "%.xlsx", "%.jpg", "%.png", "%.webp",
+    "%.pdf", "%.odt", "%.ico",
+}
+
 telescope.setup {
 	defaults = {
 
 		prompt_prefix = " ",
 		selection_caret = " ",
 		path_display = { "smart" },
+
+		file_ignore_patterns = ignore_filetypes_list,
 
 		mappings = {
 			i = {
