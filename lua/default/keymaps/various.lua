@@ -28,7 +28,8 @@ vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap =
 vim.keymap.set("n", "<Leader>pp", ":SnippetPrint<CR>", {remap = true, silent = true})
 
 -- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+--[[ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) ]]
+keymap("n", "<leader>e", ":Triptych<cr>", opts)
 
 -- Trouble plugin
 vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents

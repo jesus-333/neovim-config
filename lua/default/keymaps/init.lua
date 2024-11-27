@@ -10,12 +10,13 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require "default.keymaps.telescope"
-require "default.keymaps.surround"
-require "default.keymaps.register"
-require "default.keymaps.navigation"
-require "default.keymaps.various"
 require "default.keymaps.move_text"
+--[[ require "default.keymaps.nvim-tree" ]]
+require "default.keymaps.navigation"
+require "default.keymaps.register"
+require "default.keymaps.surround"
+require "default.keymaps.telescope"
+require "default.keymaps.various"
 
 -- Modes
 --   normal_mode = "n",
