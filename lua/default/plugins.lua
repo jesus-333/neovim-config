@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	use 'kyazdani42/nvim-tree.lua'				-- nvim-tree (file explorer)
 	use 'stevearc/oil.nvim'						-- File explored managed as a text buffer
 	use 'simonmclean/triptych.nvim'				-- triptych (alternative file explorer)
+	use 'mikavilpas/yazi.nvim'					-- Neovim extension for the yazi file explorer
 
 	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
 	use "ahmedkhalf/project.nvim"				-- Project plugins

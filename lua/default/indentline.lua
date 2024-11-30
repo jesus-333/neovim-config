@@ -1,5 +1,6 @@
 local status_ok, indent_blankline = pcall(require, "ibl")
 if not status_ok then
+	print("Problem with indent_blankline")
 	return
 end
 
@@ -28,7 +29,6 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
     vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
     vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 end)
---
 --[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
 
 
