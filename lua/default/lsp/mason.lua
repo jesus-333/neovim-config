@@ -2,7 +2,7 @@
 local servers = {
 	-- Python LSP
 	"jedi_language_server",
-	"ruff_lsp",
+	"ruff",
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
 	--[[ "pylsp", ]]

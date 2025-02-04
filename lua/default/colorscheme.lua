@@ -27,8 +27,9 @@ require("tokyonight").setup({
 	---@param colors ColorScheme
 	on_colors = function(colors)
 		colors.comment = "#5aff3d"
-		colors.terminal_black = '#c0caf5' -- Variable not used
-		colors.fg = '#FFFFFF' -- Normal text
+		colors.terminal_black = '#c0caf5' 	-- Variable not used
+		colors.fg = '#FFFFFF' 				-- Normal text
+		colors.fg_gutter = "#898899" 		-- Line number color
 	end,
 
 	--- You can override specific highlights to use other groups or a hex color
@@ -36,7 +37,7 @@ require("tokyonight").setup({
 	---@param highlights Highlights
 	---@param colors ColorScheme
 	on_highlights = function(highlights, colors) 
-		highlights.LineNr = {
+		colors.LineNr = {
 			fg = '#696969'
 		}
 		highlights.CursorLineNr = {
