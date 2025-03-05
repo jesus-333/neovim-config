@@ -37,11 +37,19 @@ require("tokyonight").setup({
 	---@param highlights Highlights
 	---@param colors ColorScheme
 	on_highlights = function(highlights, colors) 
+		-- Color of all lines number
 		colors.LineNr = {
 			fg = '#696969'
 		}
+
+		-- Color of the current line number
 		highlights.CursorLineNr = {
 			fg = colors.red
+		}
+
+		-- Change function color
+		highlights.Function = {
+			fg = '#8afbff'
 		}
 	end,
 })
