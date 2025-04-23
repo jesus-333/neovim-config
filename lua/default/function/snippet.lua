@@ -3,7 +3,7 @@ function _G.snippet_python_file_template()
 
 	table.insert(basic_imports_string, "\"\"\"")
 	table.insert(basic_imports_string, "@author : Alberto (Jesus) Zancanaro")
-	table.insert(basic_imports_string, "@organization : University of Padua")
+	table.insert(basic_imports_string, "@organization : Luxembourg Centre for Systems Biomedicine (LCSB)")
 	table.insert(basic_imports_string, "\"\"\"")
 	table.insert(basic_imports_string, "import numpy as np")
 	table.insert(basic_imports_string, "import matplotlib.pyplot as plt")
@@ -72,6 +72,5 @@ function _G.snippet_print()
 		vim.print("Language not supported")
 	end
 
-	
 	return print_string
 end
