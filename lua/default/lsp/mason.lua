@@ -1,11 +1,13 @@
 -- Server to config
 local servers = {
 	-- Python LSP
-	"jedi_language_server",
+	--[[ "jedi_language_server", ]]
 	"ruff",
 	--[[ "pyright", ]]
 	--[[ "pylyzer", ]]
-	--[[ "pylsp", ]]
+	"pylsp",
+	--[[ "sith_lsp", ]]
+	--[[ "sith-language-server", ]]
 	
 	-- Other Languages
 	"clangd",
@@ -44,6 +46,7 @@ require("mason-lspconfig").setup({
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
+	print("lspconfig status IS NOT OK")
 	return
 end
 
@@ -64,8 +67,12 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-	lspconfig[server].setup(opts)
+	--[[ lspconfig[server].setup(opts) ]]
+	vim.lsp.enable(server)
+	vim.lsp.config(server, opts)
 end
 
 -- Separate setup (the setup of some servers don't work with the cycle)
 --[[ require'lspconfig'.grammarly.setup{ init_options = {clientId = "client_BaDkMgx4X19X9UxxYRCXZo"}} ]]
+
+-- TODO Consider if rewrite all lsp config
