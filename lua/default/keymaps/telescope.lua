@@ -30,6 +30,9 @@ keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('
 keymap("n", "<leader>bo", "<cmd>lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)	-- List of files open in the past
 keymap("n", "<leader>br", "<cmd>lua require'telescope.builtin'.registers(require('telescope.themes').get_cursor({ previewer = false }))<cr>", opts)		-- Show register
 
+-- Visualize errors and warning
+vim.keymap.set("n", "tt", "<cmd>Telescope diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
+
 -- Telescope projects (require extension)
 keymap("n", "<leader>bp", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>", opts)
 

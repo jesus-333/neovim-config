@@ -23,7 +23,7 @@ keymap("n", "<leader>q", ":q<CR>", opts)
 -- Open LazyGit
 keymap("n", "<leader>z", ":LazyGit<CR>", opts)
 
--- Insert a string of dash space char as comment
+-- Insert text
 vim.keymap.set("n", "--", "I<CR><ESC>k<ESC>33i- <ESC><ESC>gccP<ESC>dd", {remap = true, silent = true})
 vim.keymap.set("n", "<Leader>pp", ":SnippetPrint<CR>", {remap = true, silent = true})
 
@@ -33,7 +33,7 @@ vim.keymap.set("n", "<Leader>pp", ":SnippetPrint<CR>", {remap = true, silent = t
 keymap("n", "<leader>e", ":Yazi<cr>", opts)
 
 -- Trouble plugin
-vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents
+--[[ vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents ]]
 
 -- Copilot
 keymap("n", "<leader>cp", ":Copilot panel<cr>", opts)
