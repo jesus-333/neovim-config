@@ -13,6 +13,7 @@ local servers = {
 	"clangd",
 	"rust_analyzer",
 	"lua_ls",
+ 	"bashls",
 	
 	-- Other stuff
 	"jsonls",
