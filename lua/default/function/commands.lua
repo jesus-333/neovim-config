@@ -69,4 +69,32 @@ vim.api.nvim_create_user_command("ReloadConfig", function()
   vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end, {})
 
+vim.api.nvim_create_user_command("HarperDictionaryOpen", function()
+	-- Copy current word
+	vim.cmd.normal("yiw")
+
+	-- Open Harper dictionary
+	vim.cmd(":e ~/Library/Application Support/harper-ls/dictionary.txt ")
+
+	-- Go to the end of the file
+	vim.cmd.normal("G")
+	vim.cmd.normal("A")
+
+	-- Insert new line
+	vim.cmd.normal("o")
+
+	-- Past word
+	vim.cmd.normal("p")
+	
+	-- Sort and save file
+	vim.cmd("sort")
+	vim.cmd("w")
+
+	-- Reload Harper
+	vim.cmd("LspRestart harper_ls")
+
+end, {})
+
+
+
 --[[ vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {}) ]]

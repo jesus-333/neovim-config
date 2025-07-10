@@ -28,15 +28,17 @@ dashboard.section.header.val = {
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠛⠋⠛⠙⠛⠙⠛⠙⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 }
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("p", "  Find project", "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>"),
+	dashboard.button("f" , "🔍 Find file"			   , ":Telescope find_files <CR>"),
+	dashboard.button("e" , "📄 New file"			   , ":ene <BAR> startinsert <CR>"),
+	dashboard.button("p" , "📁 Find project"		   , "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>"),
+	dashboard.button("t" , "📝 Find text"			   , ":Telescope live_grep <CR>"),
+	dashboard.button("cn", "⚙️ Configuration (nvim)"   , ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("ct", "⚙️ Configuration (tmux)"   , ":e ~/.config/nvim/other/.tmux.conf <CR>"),
+	dashboard.button("cg", "👻 Configuration (ghostty)", ":e ~/Library/Application Support/com.mitchellh.ghostty/config <CR>"),
+	dashboard.button("ch", "📚 Harper dictionary"	   , ":e ~/Library/Application Support/harper-ls/dictionary.txt <CR>"),
+	dashboard.button("h" , "🏥 Check Health"		   , ":checkhealth <CR>"),
+	dashboard.button("q" , "🚪 Quit Neovim"			   , ":qa<CR>"),
 	--[[ dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"), ]]
-	dashboard.button("t", "󰟵  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("cn", "  Configuration (nvim)", ":e ~/.config/nvim/init.lua <CR>"),
-	dashboard.button("ct", "  Configuration (tmux)", ":e ~/.config/nvim/other/.tmux.conf <CR>"),
-	dashboard.button("h", "󰋠  Check Health", ":checkhealth <CR>"),
-	dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 }
 
 local function footer()
@@ -54,3 +56,14 @@ dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
 
 --[[ vim.cmd('Alpha') ]]
+
+-- Backup old icons
+--[[ dashboard.button("f" , " Find file"			   , ":Telescope find_files <CR>"), ]]
+--[[ dashboard.button("e" , " New file"			   , ":ene <BAR> startinsert <CR>"), ]]
+--[[ dashboard.button("p" , " Find project"		   , "<cmd>lua require('telescope').extensions.projects.projects(require('telescope.themes').get_dropdown({hidden=true}))<cr>"), ]]
+--[[ dashboard.button("t" , "󰟵 Find text"			   , ":Telescope live_grep <CR>"), ]]
+--[[ dashboard.button("cn", " Configuration (nvim)"   , ":e ~/.config/nvim/init.lua <CR>"), ]]
+--[[ dashboard.button("ct", " Configuration (tmux)"   , ":e ~/.config/nvim/other/.tmux.conf <CR>"), ]]
+--[[ dashboard.button("cg", " Configuration (ghostty)", ":e ~/.config/nvim/other/.tmux.conf <CR>"), ]]
+--[[ dashboard.button("h" , "󰋠 Check Health"		   , ":checkhealth <CR>"), ]]
+--[[ dashboard.button("q" , "󰩈 Quit Neovim"			   , ":qa<CR>"), ]]
