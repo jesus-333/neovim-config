@@ -2,21 +2,24 @@ return {
 	settings = {
 		["harper-ls"] = {
 			linters = {
-				spell_check = true,
-				spelled_numbers = true,
-				an_a = true,
-				sentence_capitalization = true,
-				unclosed_quotes = true,
-				wrong_quotes = false,
-				long_sentences = true,
-				repeated_words = true,
-				spaces = true,
-				matcher = true,
-				correct_number_suffix = true,
-				number_suffix_capitalization = true,
-				multiple_sequential_pronouns = true,
-				linking_verbs = false
-			}
+				SpellCheck = true,
+				SpelledNumbers = false,
+				AnA = true,
+				SentenceCapitalization = false,
+				UnclosedQuotes = true,
+				WrongQuotes = false,
+				LongSentences = false,
+				RepeatedWords = true,
+				Spaces = true,
+				Matcher = true,
+				CorrectNumberSuffix = true
+			},
+			codeActions = {
+				ForceStable = false
+			},
+			markdown = {
+				IgnoreLinkTitle = false
+			},
 		}
 	}
 }

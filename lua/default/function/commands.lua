@@ -69,7 +69,7 @@ vim.api.nvim_create_user_command("ReloadConfig", function()
   vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end, {})
 
-vim.api.nvim_create_user_command("HarperDictionaryOpen", function()
+vim.api.nvim_create_user_command("HarperAddWordAndOpenDictionary", function()
 	-- Copy current word
 	vim.cmd.normal("yiw")
 
