@@ -1,5 +1,3 @@
-# Backup of ghostty config
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Tabs
 
@@ -50,14 +48,16 @@ copy-on-select = true
 clipboard-read = allow
 clipboard-write = allow
 
+keybind = ctrl+v=paste_from_clipboard
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Graphic stuff
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 
 font-family = Liga SFMono Nerd Font
 font-style = Regular
-font-size = 14
+font-size = 13.5
 font-thicken = true
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -68,12 +68,24 @@ keybind = ctrl+space>z=text:lazygit\n
 keybind = ctrl+space>n=text:nvim\n
 keybind = ctrl+space>e=text:yazi\n
 keybind = ctrl+space>b=text:btop\n
+keybind = ctrl+space>l=text:lla\n
 keybind = ctrl+space>i=text:ipython\n%load_ext autoreload\n%autoreload 2\n
+
+# Session setup
+# keybind = ctrl+space>c>1=text:lazygit\n
 
 # Reload config
 keybind = ctrl+space>r=reload_config
 
 # Copy/Paste settings
 copy-on-select = clipboard
+
+# Navitagations
+# keybind = ctrl+space>space=text:open .\n
+keybind = ctrl+space>u=text:cd ..\n
+
+# Fzf
+keybind = ctrl+space>t=text:fzf-file-widget\n
+keybind = ctrl+space>f=text:fzf-cd-widget\n
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
