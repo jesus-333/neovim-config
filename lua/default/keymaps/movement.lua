@@ -1,5 +1,8 @@
 local opts = { noremap = true, silent = true }
 
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+-- NAVIGATION
+
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -32,6 +35,41 @@ keymap("n", "<C-s>v", ":vsplit<CR>", opts)
 keymap("n", "<C-s>h", ":split<CR>", opts)
 keymap("n", "<C-s>d", ":close<CR>", opts)
 
--- Jump
+-- Jump between functions
 vim.keymap.set("n", "mk", "[m", {remap = true, silent = true})   	--  Move to the previous method (works in python)	
 vim.keymap.set("n", "mj", "]m", {remap = true, silent = true})   	--  Move to the next method (works in python) 	
+
+-- Leap nvim plugins (jump on specific combo of characters)
+vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+vim.keymap.set({ "n", "x", "o" }, "gs", "<Plug>(leap-from-window)")
+
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+-- MOVE TEXT
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+-- Move text up and down
+--[[ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- Down ]]
+--[[ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- Up ]]
+
+-- Insert --
+keymap("i", "jk", "<ESC>", opts) -- Press jk fast to enter
+
+-- Visual --
+keymap("v", "<", "<gv", opts) -- Remove indent
+keymap("v", ">", ">gv", opts) -- Indent
+
+-- Move text up and down
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "p", '"_dP', opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+

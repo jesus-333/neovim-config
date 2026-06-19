@@ -117,12 +117,24 @@ cmp.setup {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
 	},
+	-- OLD VERSION. No longer working after migrating to lazy.nvim
+	--[[ window = { ]]
+	--[[ 	completion = cmp.config.window.bordered(), ]]
+	--[[ 	documentation = cmp.config.window.bordered(), ]]
+	--[[ }, ]]
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered({
+			border = "rounded",
+			winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+		}),
+		documentation = cmp.config.window.bordered({
+			border = "rounded",
+			winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+		}),
 	},
 	experimental = {
 		ghost_text = false,
 		native_menu = false,
 	},
+
 }

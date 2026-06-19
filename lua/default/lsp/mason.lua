@@ -16,11 +16,13 @@ local servers = {
  	"bashls",
 	
 	-- Other stuff
+	"ltex_plus",
 	"jsonls",
 	"texlab",
-	"taplo"
+	"taplo",
+	"harper_ls",
+	"tinymist",
 	--[[ "ltex" ]]
-	--[[ "harper_ls", ]]
 	--[[ "grammarly" ]]
 	--[[ "html", ]]
 	--[[ "cssls", ]]

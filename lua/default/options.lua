@@ -37,7 +37,7 @@ local options = {
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
-  vim.opt[k] = v
+	vim.opt[k] = v
 end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"

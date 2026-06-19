@@ -1,135 +1,136 @@
-local fn = vim.fn
-
--- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+-- ============================================================================
+-- lazy.nvim bootstrap (replaces the old packer auto-install block)
+-- ============================================================================
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
+vim.opt.rtp:prepend(lazypath)
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+-- NOTE: <leader> must be set BEFORE this file runs.
+-- In your init.lua, `require "default.keymaps"` (which sets vim.g.mapleader)
+-- already runs before `require "default.plugins"`, so you're good.
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
+local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then
-  return
+	return
 end
 
--- Have packer use a popup window
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
-}
+-- ============================================================================
+-- Plugin specification
+--
+-- Structure note: to keep your current setup (each plugin configured in its
+-- own file under lua/default/, required from init.lua AFTER this file), every
+-- plugin here is declared with `lazy = false`. That means lazy.nvim installs
+-- and loads them all at startup, exactly like packer did, and your existing
+-- `require "default.xxx"` calls in init.lua keep working unchanged.
+--
+-- When you later want faster startup, you can move each plugin's config into
+-- its spec here (via `config`/`opts`/`event`/`keys`/`ft`) and drop the matching
+-- require from init.lua, one plugin at a time.
+-- ============================================================================
+lazy.setup({
+	defaults = { lazy = false }, -- packer-like behaviour: load everything at startup
 
--- Install your plugins here
-return packer.startup(function(use)
-	-- Various
-	use "wbthomason/packer.nvim"				-- Have packer manage itself
-	use "nvim-lua/popup.nvim"					-- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim"					-- Useful lua functions used in lots of plugins
-	use 'kyazdani42/nvim-tree.lua'				-- nvim-tree (file explorer)
-	use 'stevearc/oil.nvim'						-- File explored managed as a text buffer
-	use 'simonmclean/triptych.nvim'				-- triptych (alternative file explorer)
-	use 'mikavilpas/yazi.nvim'					-- Neovim extension for the yazi file explorer
+	spec = {
+		-- Various ---------------------------------------------------------------
+		{ "nvim-lua/popup.nvim" }, -- An implementation of the Popup API from vim in Neovim
+		{ "nvim-lua/plenary.nvim" }, -- Useful lua functions used in lots of plugins
+		{ "kyazdani42/nvim-tree.lua" }, -- nvim-tree (file explorer)
+		{ "stevearc/oil.nvim" }, -- File explorer managed as a text buffer
+		{ "simonmclean/triptych.nvim" }, -- triptych (alternative file explorer)
+		{ "mikavilpas/yazi.nvim" }, -- Neovim extension for the yazi file explorer
 
-	use 'simrat39/symbols-outline.nvim'			-- List of symbols in a file (e.g. variable/functions )
-	use "ahmedkhalf/project.nvim"				-- Project plugins
-	use 'simrat39/rust-tools.nvim'
-	use 'wakatime/vim-wakatime' 				-- Stats about coding
-	use 'rhysd/vim-grammarous'
-	--[[ use 'akinsho/toggleterm.nvim'				-- Persist and toggle multiple terminals during an editing session ]]
+		{ "simrat39/symbols-outline.nvim" }, -- List of symbols in a file (e.g. variable/functions)
+		{ "ahmedkhalf/project.nvim" }, -- Project plugin
+		{ "simrat39/rust-tools.nvim" },
+		{ "wakatime/vim-wakatime" }, -- Stats about coding
+		{ "rhysd/vim-grammarous" },
+		-- { "akinsho/toggleterm.nvim" }, -- Persist and toggle multiple terminals during an editing session
 
-	-- Navigation/editing
-	use 'RRethy/vim-illuminate'					-- Highlight text under the cursor
-	use "numToStr/Comment.nvim"					-- Easily comment stuff
-	use "kylechui/nvim-surround"				-- Plugins to add various type of surrounding
-	use "ggandor/leap.nvim"						-- Navigation plugin
-	use "windwp/nvim-autopairs"					-- Autopairs, integrates with both cmp and treesitter
-	
-	-- UI/Graphics/Notifications plugins
-	use 'romgrk/barbar.nvim'					-- Show tabs of the open file
-	use "lukas-reineke/indent-blankline.nvim" 	-- This plugin adds indentation guides to all lines (including empty lines)(i.e. show vertical line to indicate different indentation levels).
-	use "folke/which-key.nvim"					-- Show the possible keybinding when you press a key
-	use 'goolord/alpha-nvim'					-- Greeter (default stuff when you don't open directly a file)
-	use 'BlakeJC94/alpha-nvim-fortune'			-- Add citations to alpha greeter
-	use 'MunifTanjim/nui.nvim'					-- UI Component library for Neovim
-	use 'stevearc/dressing.nvim'				-- Improve nvim UI
-	use 'rcarriga/nvim-notify'					-- Notification plugins 
-	use 'folke/noice.nvim'						-- Replace ui for message cmdline and popmenu
+		-- Navigation/editing ---------------------------------------------------
+		{ "RRethy/vim-illuminate" }, -- Highlight text under the cursor
+		{ "numToStr/Comment.nvim" }, -- Easily comment stuff
+		{ "kylechui/nvim-surround" }, -- Plugin to add various type of surrounding
+		{ url = "https://codeberg.org/andyg/leap.nvim"}, -- Navigation plugin
+		{ "windwp/nvim-autopairs" }, -- Autopairs, integrates with both cmp and treesitter
 
-	-- Statusline plugin
-	use "nvim-lualine/lualine.nvim" -- A blazing fast and easy to configure Neovim statusline written in Lua.
-	use "SmiteshP/nvim-navic"		-- A simple statusline/winbar component that uses LSP to show your current code context (e.g. if you are inside a function the name of the function)
+		-- UI/Graphics/Notifications --------------------------------------------
+		{ "romgrk/barbar.nvim" }, -- Show tabs of the open file
+		{ "lukas-reineke/indent-blankline.nvim" }, -- Indentation guides on all lines (incl. empty lines)
+		{ "folke/which-key.nvim" }, -- Show the possible keybindings when you press a key
+		{ "goolord/alpha-nvim" }, -- Greeter (default screen when you don't open a file directly)
+		{ "BlakeJC94/alpha-nvim-fortune" }, -- Add citations to alpha greeter
+		{ "MunifTanjim/nui.nvim" }, -- UI Component library for Neovim
+		{ "stevearc/dressing.nvim" }, -- Improve nvim UI
+		{ "rcarriga/nvim-notify" }, -- Notification plugin
+		{ "folke/noice.nvim" }, -- Replace UI for messages, cmdline and popupmenu
 
-	-- completion plugins
-	use "hrsh7th/nvim-cmp" 			-- The completion plugin
-	use "hrsh7th/cmp-buffer" 		-- buffer completions
-	use "hrsh7th/cmp-path" 			-- path completions
-	use "hrsh7th/cmp-cmdline" 		-- cmdline completions
-	use "hrsh7th/cmp-nvim-lsp"		-- nvim-cmp source for neovim's built-in language server client.
-	use "hrsh7th/cmp-nvim-lua"		-- nvim-cmp source for neovim Lua API.
+		-- Statusline ------------------------------------------------------------
+		{ "nvim-lualine/lualine.nvim" }, -- Fast, easy to configure statusline written in Lua
+		{ "SmiteshP/nvim-navic" }, -- Statusline/winbar component showing current code context via LSP
 
-	-- snippets
-	use "L3MON4D3/LuaSnip" 					-- snippet engine
-	use "saadparwaiz1/cmp_luasnip" 			-- snippet completions
-	-- use "rafamadriz/friendly-snippets" 	-- a bunch of snippets to use
+		-- Completion ------------------------------------------------------------
+		{ "hrsh7th/nvim-cmp" }, -- The completion plugin
+		{ "hrsh7th/cmp-buffer" }, -- buffer completions
+		{ "hrsh7th/cmp-path" }, -- path completions
+		{ "hrsh7th/cmp-cmdline" }, -- cmdline completions
+		{ "hrsh7th/cmp-nvim-lsp" }, -- nvim-cmp source for Neovim's built-in LSP client
+		{ "hrsh7th/cmp-nvim-lua" }, -- nvim-cmp source for Neovim Lua API
 
-	-- LSP (Language Server Protocol)
-	use {
-		"williamboman/mason.nvim",				-- LSP Installer
-		"williamboman/mason-lspconfig.nvim",	-- LSP Installer
-		"neovim/nvim-lspconfig" 				-- Enalbe LSP
-	}
-	use "folke/trouble.nvim"					-- List of all the LSP notifications in the files
-	use "nvimtools/none-ls.nvim"				-- Comunity version of null-ls
-	use "zbirenbaum/copilot.lua"				-- Github Copilot (extension written in lua)
-	--[[ use "github/copilot.vim"					-- Github Copilot (original version)]]
+		-- Snippets --------------------------------------------------------------
+		{ "L3MON4D3/LuaSnip" }, -- snippet engine
+		{ "saadparwaiz1/cmp_luasnip" }, -- snippet completions
+		-- { "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
-	-- Colorscheme
-	use 'folke/tokyonight.nvim'
-	use "lunarvim/darkplus.nvim"
+		-- LSP (Language Server Protocol) ---------------------------------------
+		{ "williamboman/mason.nvim" }, -- LSP Installer
+		{ "williamboman/mason-lspconfig.nvim" }, -- LSP Installer
+		{ "neovim/nvim-lspconfig" }, -- Enable LSP
+		{ "folke/trouble.nvim" }, -- List of all the LSP notifications in the files
+		{ "nvimtools/none-ls.nvim" }, -- Community version of null-ls
+		{ "zbirenbaum/copilot.lua" }, -- Github Copilot (extension written in lua)
+		-- { "github/copilot.vim" }, -- Github Copilot (original version)
 
-	-- Telescope
-	use "nvim-telescope/telescope.nvim"					-- Telescope main repository
-	--[[ use 'nvim-telescope/telescope-media-files.nvim'		-- Allow telescope to visualize media files ]]
-	--[[ use "nvim-telescope/telescope-file-browser.nvim"	-- Plugin that allow synchronized creation, deletion, renaming, and moving of files ]]
+		-- Colorscheme -----------------------------------------------------------
+		{ "folke/tokyonight.nvim" },
+		{ "lunarvim/darkplus.nvim" },
 
-	-- Treesitter
-	use	"nvim-treesitter/nvim-treesitter" 				-- Treesitter main repository
-	--[[ use "p00f/nvim-ts-rainbow" 							-- Plugin for Treesitter for nested parenthesis TODO. Reinstallare fra un po' di tempo perchè per ora da errore ]]
-	use 'JoosepAlviste/nvim-ts-context-commentstring' 	-- Use treesitter queries to create comments based on the context of the file
-	use 'nvim-treesitter/nvim-treesitter-context'		-- Use treesitter to show the current context (e.g. the function you are inside at the moment)
+		-- Telescope -------------------------------------------------------------
+		{ "nvim-telescope/telescope.nvim" }, -- Telescope main repository
+		-- { "nvim-telescope/telescope-media-files.nvim" }, -- Allow telescope to visualize media files
+		-- { "nvim-telescope/telescope-file-browser.nvim" }, -- Synchronized create/delete/rename/move of files
 
-	-- Git
-	use 'lewis6991/gitsigns.nvim'	-- Show diff, blame in the editor etc
-	use 'kdheepak/lazygit.nvim'		-- Interface with lazygit
-	use 'akinsho/git-conflict.nvim' -- Plugin to resolve merge conflicts
+		-- Treesitter ------------------------------------------------------------
+		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }, -- Treesitter main repository
+		-- { "p00f/nvim-ts-rainbow" }, -- Treesitter rainbow parens (currently erroring upstream)
+		{ "JoosepAlviste/nvim-ts-context-commentstring" }, -- Context-aware commentstring via treesitter
+		{ "nvim-treesitter/nvim-treesitter-context" }, -- Show the current context (e.g. enclosing function)
 
-	-- Devicons
-	use 'nvim-tree/nvim-web-devicons'
+		-- Git -------------------------------------------------------------------
+		{ "lewis6991/gitsigns.nvim" }, -- Show diff, blame in the editor etc
+		{ "kdheepak/lazygit.nvim" }, -- Interface with lazygit
+		{ "akinsho/git-conflict.nvim" }, -- Plugin to resolve merge conflicts
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
-end)
+		-- Devicons --------------------------------------------------------------
+		{ "nvim-tree/nvim-web-devicons" },
+	},
 
+	-- Don't auto-install a colorscheme on the install screen; you set tokyonight
+	-- yourself in default/colorscheme.lua.
+	install = { colorscheme = { "tokyonight", "habamax" } },
 
+	-- Have lazy use a rounded popup window (matches your old packer float).
+	ui = { border = "rounded" },
+
+	-- Disable the automatic update checker (packer didn't do this either).
+	checker = { enabled = false },
+})

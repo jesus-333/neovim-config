@@ -12,7 +12,7 @@ vim.g.maplocalleader = " "
 
 require "default.keymaps.move_text"
 --[[ require "default.keymaps.nvim-tree" ]]
-require "default.keymaps.navigation"
+require "default.keymaps.movement"
 require "default.keymaps.register"
 require "default.keymaps.surround"
 require "default.keymaps.telescope"
