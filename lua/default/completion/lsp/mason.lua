@@ -58,14 +58,14 @@ local opts = {}
 -- Setup lsp servers
 for _, server in pairs(servers) do
 	opts = {
-		on_attach = require("default.lsp.handlers").on_attach,
-		capabilities = require("default.lsp.handlers").capabilities,
+		on_attach = require("default.completion.lsp.handlers").on_attach,
+		capabilities = require("default.completion.lsp.handlers").capabilities,
 	}
 
 	server = vim.split(server, "@")[1]
 	
 	-- Get the setting of the server inside the folder settings from the file with the name of the server
-	local require_ok, conf_opts = pcall(require, "default.lsp.settings." .. server)
+	local require_ok, conf_opts = pcall(require, "default.completion.lsp.settings." .. server)
 	if require_ok then
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end

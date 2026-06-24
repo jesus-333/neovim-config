@@ -3,9 +3,9 @@ if not status_ok then
   return
 end
 
-require "default.lsp.mason"
-require("default.lsp.handlers").setup()
-require "default.lsp.null-ls"
+require "default.completion.lsp.mason"
+require("default.completion.lsp.handlers").setup()
+require "default.completion.lsp.null-ls"
 
 
 --[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]

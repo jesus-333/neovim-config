@@ -91,13 +91,14 @@ lazy.setup({
 		{ "saadparwaiz1/cmp_luasnip" }, -- snippet completions
 		-- { "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
-		-- LSP (Language Server Protocol) ---------------------------------------
-		{ "williamboman/mason.nvim" }, -- LSP Installer
-		{ "williamboman/mason-lspconfig.nvim" }, -- LSP Installer
-		{ "neovim/nvim-lspconfig" }, -- Enable LSP
-		{ "folke/trouble.nvim" }, -- List of all the LSP notifications in the files
-		{ "nvimtools/none-ls.nvim" }, -- Community version of null-ls
-		{ "zbirenbaum/copilot.lua" }, -- Github Copilot (extension written in lua)
+		-- LSP (Language Server Protocol) and code completion --------------------
+		{ "williamboman/mason.nvim" }, 				-- LSP Installer
+		{ "williamboman/mason-lspconfig.nvim" },	-- LSP Installer
+		{ "neovim/nvim-lspconfig" },				-- Enable LSP
+		{ "folke/trouble.nvim" }, 					-- List of all the LSP notifications in the files
+		{ "nvimtools/none-ls.nvim" },				-- Community version of null-ls
+		{ "zbirenbaum/copilot.lua" },				-- Github Copilot (extension written in lua)
+		{ "milanglacier/minuet-ai.nvim" },			-- Minuet AI (LLM extenstion with both local and remote LLM support)
 		-- { "github/copilot.vim" }, -- Github Copilot (original version)
 
 		-- Colorscheme -----------------------------------------------------------
