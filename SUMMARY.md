@@ -1,5 +1,7 @@
 # Neovim Configuration Summary
 
+Generated through Claude
+
 ## Overview
 
 A personal Neovim configuration managed with **lazy.nvim** (migrated from packer.nvim).
