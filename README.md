@@ -1,3 +1,5 @@
+Test branch used to play with LLMs
+
 # neovim-config
 Pure lua configuration for Neovim editor
 
