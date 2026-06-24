@@ -1,0 +1,7 @@
+require "default.custom_functions.buffer_interaction"
+require "default.custom_functions.commands"
+require "default.custom_functions.create_buffers"
+require "default.custom_functions.execute_code"
+require "default.custom_functions.various"
+require "default.custom_functions.snippet"
+require "default.custom_functions.tmux_integration"

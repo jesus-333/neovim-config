@@ -6,13 +6,6 @@ require "default.keymaps" -- Keymaps config (multiple files)
 require "default.plugins" -- File with the list of all the plugins used
 
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
--- Completion (LSP, LLMs etc)
-require "default.completion.lsp"
-require "default.completion.cmp"
-require "default.completion.copilot"
-require "default.completion.minuet"
-
--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 -- File Explorer (All plugins focused on moving between files and directories)
 
 require "default.file_explorer.oil"			-- oil (file explorer)
@@ -28,6 +21,13 @@ require "default.text_interaction.autopairs"	-- Brackets automatic closure
 require "default.text_interaction.comments"		-- Comments plugin (add command to comments line(s))
 require "default.text_interaction.leap"			-- Navigation plugin
 require "default.text_interaction.surround"		-- Surround stuff with brackets et similia
+
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+-- Completion (LSP, LLMs etc)
+require "default.completion.lsp"
+require "default.completion.cmp"
+require "default.completion.copilot"
+require "default.completion.minuet"
 
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 -- Various (All plugins that don't fit in the other categories)
@@ -55,4 +55,5 @@ require "default.ui.vim-illuminate"	-- vim-illuminate (text highlight)
 -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 -- Custom functions (All the custom functions I wrote for my personal use)
 
-require "default.function"
+require "default.custom_functions"
+require "default.custom_functions.ghost"

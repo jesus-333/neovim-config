@@ -1,7 +1,0 @@
-require "default.function.buffer_interaction"
-require "default.function.commands"
-require "default.function.create_buffers"
-require "default.function.execute_code"
-require "default.function.various"
-require "default.function.snippet"
-require "default.function.tmux_integration"

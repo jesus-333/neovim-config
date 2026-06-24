@@ -1,6 +1,12 @@
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
+local function desc(text)
+  return vim.tbl_extend("force", opts, { desc = text })
+end
+
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -35,17 +41,6 @@ keymap("n", "<leader>e", ":Yazi<cr>", opts)
 -- Trouble plugin
 --[[ vim.keymap.set("n", "tt", "<cmd>TroubleToggle document_diagnostics<cr>", {noremap = true, silent = true})  -- Create a list with all the lsp notes for the documents ]]
 
--- Copilot
-keymap("n", "<leader>cp", ":Copilot panel<cr>", opts)
-keymap("n", "<leader>cs", ":Copilot suggestion<cr>", opts)
-vim.keymap.set('i', '<Tab>', function()
-	if require("copilot.suggestion").is_visible() then
-		require("copilot.suggestion").accept()
-	else
-		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
-	end
-end, { desc = "Super Tab" })
-
 -- Replace Text
 keymap("n", "<leader>r1", ":%s/", opts)
 keymap("n", "<leader>r2", ":s/", opts)
@@ -68,3 +63,29 @@ keymap("n", "<leader>sc", ":lua switch_case()<CR>", opts) -- Change from CamelCa
 -- Send text to tmux (TODO)
 --[[ keymap("n", "<C-e>", ":lua send_current_line(1)<cr>", opts) ]]
 --[[ keymap("v", "<C-e>", ":SendYankedTextIpython<cr>", opts) ]]
+
+--[[ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ]]
+-- Completion
+
+-- Copilot (OLD)
+--[[ keymap("n", "<leader>cp", ":Copilot panel<cr>", opts) ]]
+--[[ keymap("n", "<leader>cs", ":Copilot suggestion<cr>", opts) ]]
+--[[ vim.keymap.set('i', '<Tab>', function() ]]
+--[[ 	if require("copilot.suggestion").is_visible() then ]]
+--[[ 		require("copilot.suggestion").accept() ]]
+--[[ 	else ]]
+--[[ 		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false) ]]
+--[[ 	end ]]
+--[[ end, { desc = "Super Tab" }) ]]
+
+-- Ghost (custom module that support different backend)
+local ghost = require("default.custom_functions.ghost")
+
+-- pick backend
+vim.keymap.set("n", "<leader>cb", ghost.select, desc("Select LLM backend"))
+
+-- trigger suggestion with active backend (your existing <leader>cs)
+vim.keymap.set("n", "<leader>cs", ghost.toggle, desc("Activate/deactivate ghost text"))
+
+-- super-tab accept
+vim.keymap.set("i", "<Tab>", ghost.tab, { desc = "Super Tab" })
