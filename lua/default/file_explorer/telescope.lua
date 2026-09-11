@@ -8,7 +8,7 @@ local actions = require "telescope.actions"
 
 local ignore_filetypes_list = {
     "venv", "__pycache__", "%.xlsx", "%.jpg", "%.png", "%.webp",
-    "%.pdf", "%.odt", "%.ico", "%.npy", "%.pth", ".obsidian"
+    "%.pdf", "%.odt", "%.ico", "%.npy", "%.pth", ".obsidian", "llm_wiki"
 }
 
 telescope.setup {

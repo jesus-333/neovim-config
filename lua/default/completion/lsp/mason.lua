@@ -20,8 +20,8 @@ local servers = {
 	"jsonls",
 	"texlab",
 	"taplo",
-	"harper_ls",
 	"tinymist",
+	--[[ "harper_ls", ]]
 	--[[ "ltex" ]]
 	--[[ "grammarly" ]]
 	--[[ "html", ]]
