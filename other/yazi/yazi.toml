@@ -46,5 +46,3 @@ prepend_fetchers = [
 	{ id = "git", url = "*/", run = "git", group = "1" }
 ]
 
-
-

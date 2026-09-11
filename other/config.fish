@@ -31,5 +31,8 @@ end
 set -x PATH $PATH ~/.cargo/bin/
 
 # nvim path (Used if you install nvim from tar file)
+# Used in WSL (I think)
 set -x PATH $PATH /opt/nvim-linux64/bin
 
+# Set nvim as default editor
+set -gx EDITOR nvim

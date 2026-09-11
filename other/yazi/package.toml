@@ -1,32 +1,33 @@
 [[plugin.deps]]
 use = "wylie102/duckdb"
-rev = "6259e2d"
-hash = "833314e2c2bd0de8d43ef2341cb0853b"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
 
 [[plugin.deps]]
 use = "ahkohd/eza-preview"
-rev = "6575a9a"
-hash = "72355a6c8b7c8de6ed4dda0f98f86fee"
+rev = "e8fb6c8"
+hash = "c238595c801caa4f28553b9af8cf8804"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "9629b1e"
-hash = "5204b4e2bd238c40fa66cf0a0191f084"
+rev = "f1cec0b"
+hash = "fd9312e974c63438b1f8737711462d52"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "4b027c7"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "58c4f4e"
+hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "4b027c7"
-hash = "e0ada736ea676c2bbb3ec705a49526ef"
+rev = "58c4f4e"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "7a08a09"
-hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+rev = "e73fd74"
+hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [flavor]
 deps = []
+
